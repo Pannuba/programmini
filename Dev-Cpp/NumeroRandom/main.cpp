@@ -8,37 +8,37 @@ int main(){
 	
     system("color a");
     string giocatore1, giocatore2, giocare;    
-    int num1, num2;
+    float num1, num2;
     cout << "In questo gioco vince chi estrae il numero piu' alto\n\nGiocatore 1, come ti chiami? ";
     cin >> giocatore1;
     cout << "\nGiocatore 2, come ti chiami? ";
     cin >> giocatore2;
+    srand(time(0));
     
     for ( ;; )
     
     {
-        srand((unsigned)time(0));
-        num1 = rand() % 999999999;
-	    num2 = rand() % 999999999;	
+        num1 = rand();
+	    num2 = rand();	
 		cout << "\n\nIl numero estratto da " << giocatore1 << " e' " << num1;
 		cout << "\n\nIl numero estratto da " << giocatore2 << " e' " << num2;
 		
 		if (num1 > num2)
 		
 		{
-		    cout << "\n\nHa vinto " << giocatore1 << "!!!\n\n";
+		    cout << "\n\nHa vinto " << giocatore1 << "!\n\n";
 		}
     
     	if (num1 < num2)
     
     	{
-            cout << "\n\nHa vinto " << giocatore2 << "!!!\n\n";
+            cout << "\n\nHa vinto " << giocatore2 << "!\n\n";
     	}
     
     	else if (num1 == num2)
     
     	{
-            cout << "\n\nAvete perso tutti e due balordi babbei\n\n";
+            cout << "\n\nAvete perso tutti e due!\n\n";
    		}
         
     	cout << "Volete giocare ancora? ";
