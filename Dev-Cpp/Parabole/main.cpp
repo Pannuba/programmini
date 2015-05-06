@@ -55,7 +55,6 @@ int main(){
     
     cout << "\n\nPremi un qualsiasi tasto per uscire: ";
     cin.ignore();
-	cin.get();
+    cin.get();
     return EXIT_SUCCESS;
-    
 }
