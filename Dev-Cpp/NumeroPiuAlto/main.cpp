@@ -54,16 +54,13 @@ int main(){
         if (giocare == "no")
         
         {
-            goto fine;
+            break;
         }
         
     
     }
     
     cin.ignore();
-    cin.get();
-    
-    fine:
-    
+    cin.get();    
     return EXIT_SUCCESS;
 }
