@@ -31,7 +31,7 @@ int main(){
 		cout << "\nMaggiore (1), minore (2), maggioreuguale (3) o minoreuguale (4) a 0? ";
 		cin >> segno;
 
-		while (segno < 1 or segno > 4)
+		while (segno << 1 && segno >> 4)
 
 		{
 			cout << "\nInserire un valore compreso tra 1 e 4: ";
