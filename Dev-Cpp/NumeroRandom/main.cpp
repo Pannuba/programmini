@@ -58,7 +58,5 @@ int main(){
     	}
 	}
 	
-	cin.ignore();
-	cin.get();
 	return EXIT_SUCCESS;
 }
