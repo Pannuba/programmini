@@ -2,6 +2,7 @@
 #include <iostream>
 #include <math.h>
 #include <time.h>
+#include <string>
 
 using namespace std;
 int main(){
@@ -9,7 +10,7 @@ int main(){
     system("color a");
 	int segno;
 	float a1, b1, c1, a2, b2, c2, delta1, delta2, xuno, xdue, xtre, xquattro;
-	cout << "PannRisolutoreDiDisquazioniDiGradoMaggioreAlSecondo 0.0.1 beta";
+	cout << "PannRisolutoreDiDisquazioniDiGradoMaggioreAlSecondo";
 
 	for ( ;; )
 	
@@ -41,17 +42,20 @@ int main(){
         cout << "\nMaggiore (1), minore (2), maggioreuguale (3) o minoreuguale (4) a 0? ";
 		cin >> segno;
 
-		while (segno < 1 or segno > 4)
+		while (segno < 1 || segno > 4)
 
 		{
 			cout << "\nInserire un valore compreso tra 1 e 4: ";
 			cin >> segno;
 		}
 		
+        cout << "\n\nEquazione 1:";
+		
 		if (a1 == 0)
 		
 		{
             xuno = -c1 / b1;
+            cout << "\n\nx1 = " << xuno;
             goto aunozero;
         }
               		
@@ -88,36 +92,12 @@ int main(){
 			
 		}
 
-		delta1 = (b1*b1) - (4 * a1*c1); /* No pow(b, 2) ma (b*b) perchè pow converte la variabile in double (risultati non approssimati) */
+		delta1 = (b1*b1) - (4 * a1*c1); /* No pow(b, 2) ma (b*b) perche' pow converte la variabile in double (risultati non approssimati) */
 
 		if (delta1 < 0)
 
 		{
 			cout << "\n\nIl delta e' minore di 0, quindi non esistono soluzioni all'equazione";
-
-			if (segno == 1)
-
-			{
-				cout << "\n\nPer ogni x appartenente a R    S = R\n\n";
-			}
-
-			if (segno == 2)
-
-			{
-				cout << "\n\nNon esiste x appartenente a R    S = vuoto\n\n";
-			}
-
-			if (segno == 3)
-
-			{
-				cout << "\n\nPer ogni x appartenente a R    S = R\n\n";
-			}
-
-			if (segno == 4)
-
-			{
-				cout << "\n\nNon esiste x appartenente a R    S = vuoto\n\n";
-			}
 		}
 
 		if (delta1 == 0)
@@ -126,70 +106,25 @@ int main(){
 			cout << "\n\nIl delta e' uguale a 0, quindi le due soluzioni coincidono\n\n";
 			xuno = (-b1 + sqrt(delta1)) / (2 * a1);
 			cout << "x1 = x2 = " << xuno;
-
-			if (segno == 1)
-
-			{
-				cout << "\n\nPer ogni x diverso da " << xuno << "    S = R - {" << xuno << "}\n\n";
-			}
-
-			if (segno == 2)
-
-			{
-				cout << "\n\nNon esiste x appartenente a R    S = vuoto\n\n";
-			}
-
-			if (segno == 3)
-
-			{
-				cout << "\n\nPer ogni x appartenente a R    S = R\n\n";
-			}
-
-			if (segno == 4)
-
-			{
-				cout << "\n\nx = " << xuno << "    S = {" << xuno << "}\n\n";
-			}
-
 		}
 
 		else if (delta1 > 0)
 
 		{
-			xuno = (-b1 - sqrt(delta1)) / (2 * a1); /* xuno è quello piccolo, xdue quello grande per una regola informale della matematica */
+			xuno = (-b1 - sqrt(delta1)) / (2 * a1); /* xuno e' quello piccolo, xdue quello grande per una regola informale della matematica */
 			xdue = (-b1 + sqrt(delta1)) / (2 * a1);
 			cout << "\n\nx1 = " << xuno << "    x2 = " << xdue;
-
-			if (segno == 1)
-
-			{
-				cout << "\n\nx < " << xuno << " v x > " << xdue << "    S = ] -infinito , " << xuno << " [ U ] " << xdue << " , +infinito [\n\n";
-			}
-
-			if (segno == 2)
-
-			{
-				cout << "\n\n" << xuno << " < x < " << xdue << "    S = ] " << xuno << " , " << xdue << " [\n\n";
-			}
-
-			if (segno == 3)
-
-			{
-				cout << "\n\nx <= " << xuno << " v x >= " << xdue << "    S = ] -infinito , " << xuno << " ] U [ " << xdue << " , +infinito [\n\n";
-			}
-
-			if (segno == 4)
-
-			{
-				cout << "\n\n" << xuno << " <= x <= " << xdue << "    S = [ " << xuno << " , " << xdue << " ]\n\n";
-			}
-
 		}
+		
+		aunozero:
+		
+		cout << "\n\nEquazione 2:";
 		
 		if (a2 == 0)              /* Qui comincia la seconda equazione */
 		
 		{
             xtre = -c2 / b2;
+            cout << "\n\nx3 = " << xtre;
             goto aduezero;
         }
 		
@@ -226,36 +161,12 @@ int main(){
 			
 		}
 
-		delta2 = (b2*b2) - (4 * a2*c2); /* No pow(b, 2) ma (b*b) perchè pow converte la variabile in double (risultati non approssimati) */
+		delta2 = (b2*b2) - (4 * a2*c2); /* No pow(b, 2) ma (b*b) perche' pow converte la variabile in double (risultati non approssimati) */
 
 		if (delta2 < 0)
 
 		{
 			cout << "\n\nIl delta e' minore di 0, quindi non esistono soluzioni all'equazione";
-
-			if (segno == 1)
-
-			{
-				cout << "\n\nPer ogni x appartenente a R    S = R\n\n";
-			}
-
-			if (segno == 2)
-
-			{
-				cout << "\n\nNon esiste x appartenente a R    S = vuoto\n\n";
-			}
-
-			if (segno == 3)
-
-			{
-				cout << "\n\nPer ogni x appartenente a R    S = R\n\n";
-			}
-
-			if (segno == 4)
-
-			{
-				cout << "\n\nNon esiste x appartenente a R    S = vuoto\n\n";
-			}
 		}
 
 		if (delta2 == 0)
@@ -263,112 +174,276 @@ int main(){
 		{
 			cout << "\n\nIl delta e' uguale a 0, quindi le due soluzioni coincidono\n\n";
 			xtre = (-b2 + sqrt(delta2)) / (2 * a2);
-			cout << "x1 = x2 = " << xuno;
-
-			if (segno == 1)
-
-			{
-				cout << "\n\nPer ogni x diverso da " << xtre << "    S = R - {" << xtre << "}\n\n";
-			}
-
-			if (segno == 2)
-
-			{
-				cout << "\n\nNon esiste x appartenente a R    S = vuoto\n\n";
-			}
-
-			if (segno == 3)
-
-			{
-				cout << "\n\nPer ogni x appartenente a R    S = R\n\n";
-			}
-
-			if (segno == 4)
-
-			{
-				cout << "\n\nx = " << xtre << "    S = {" << xtre << "}\n\n";
-			}
-
+			cout << "x3 = x4 = " << xtre;
 		}
 
 		else if (delta2 > 0)
 
 		{
-			xtre = (-b2 - sqrt(delta2)) / (2 * a2); /* xuno è quello piccolo, xdue quello grande per una regola informale della matematica */
+			xtre = (-b2 - sqrt(delta2)) / (2 * a2); /* xuno e' quello piccolo, xdue quello grande per una regola informale della matematica */
 			xquattro = (-b2 + sqrt(delta2)) / (2 * a2);
-			cout << "\n\nx1 = " << xtre << "    x2 = " << xquattro;
-
-			if (segno == 1)
-
-			{
-				cout << "\n\nx < " << xtre << " v x > " << xquattro << "    S = ] -infinito , " << xtre << " [ U ] " << xquattro << " , +infinito [\n\n";
-			}
-
-			if (segno == 2)
-
-			{
-				cout << "\n\n" << xtre << " < x < " << xquattro << "    S = ] " << xtre << " , " << xquattro << " [\n\n";
-			}
-
-			if (segno == 3)
-
-			{
-				cout << "\n\nx <= " << xtre << " v x >= " << xquattro << "    S = ] -infinito , " << xtre << " ] U [ " << xquattro << " , +infinito [\n\n";
-			}
-
-			if (segno == 4)
-
-			{
-				cout << "\n\n" << xtre << " <= x <= " << xquattro << "    S = [ " << xtre << " , " << xquattro << " ]\n\n";
-			}
-
-		}
-	
-    aunozero:	
-    aduezero:
-      
-	float hold;
-	float array[4] = {xuno, xdue, xtre, xquattro};
-	
-	cout << "xuno, xdue, xtre, xquattro in ordine sono:\n\n";
-	
-	for(int j = 0; j < 4; j++)
-	
-	{
-	    cout << array[j] << endl;
-	}
-
-	for(int i = 0; i < 3; i++)
-
-	{
-	
-	for(int j = 0; j < 3; j++)
-	
-	{
-	
-	    if(array[j] > array[j + 1])
+			cout << "\n\nx3 = " << xtre << "    x4 = " << xquattro;
+        }
 		
-		{
-		    hold = array[j];
-			array[j] = array[j + 1];
-			array[j + 1] = hold;
-		}
-	
-	}
-	
-	}
-	
-	cout << "\n\nIn ordine dal piu basso al piu alto sono:\n\n";
+		aduezero:
+    
+        if (a1 == 0) //nella prima equazione ho solo una soluzione
+    
+        {
+            if (delta2 == 0) //anche nella seconda!
+            
+            {
+                float hold;
+                float array[2] = {xuno, xtre};
+	        	
+	            for (int i = 0; i < 1; i++)
 
-	for(int i = 0; i < 4; i++)
+                {
+	    
+                    for (int j = 0; j < 1; j++)
 	
-	{
-	    cout << array[i] << endl;
-	}
+                    {
 	
-	cout << "\n\n";
+	                    if (array[j] > array[j + 1])
+            
+                        {
+		                    hold = array[j];
+			                array[j] = array[j + 1];
+                            array[j + 1] = hold;
+                        }
+                    
+                    }
 	
-    }
+                }
+	
+                //cout << "\n\nIn ordine dal piu basso al piu alto sono:\n\n";
+
+	            for (int i = 0; i < 2; i++)
+	
+	            {
+	                cout << array[i] << endl;
+                }
+                
+            }
+            
+            else
+            
+            {
+                float hold;
+                float array[3] = {xuno, xtre, xquattro};
+	        	
+	            for (int i = 0; i < 2; i++)
+
+                {
+	    
+                    for (int j = 0; j < 2; j++)
+	
+                    {
+	
+	                    if (array[j] > array[j + 1])
+            
+                        {
+		                    hold = array[j];
+			                array[j] = array[j + 1];
+                            array[j + 1] = hold;
+                        }
+                    
+                    }
+	
+                }
+	
+                //cout << "\n\nIn ordine dal piu basso al piu alto sono:\n\n";
+
+	            for (int i = 0; i < 3; i++)
+	
+	            {
+	                cout << array[i] << endl;
+                }
+                
+            }
+        }
+    
+        if (a2 == 0) //nella seconda equazione ho solo una soluzione!
+    
+        {
+            if (delta1 == 0) //anche nella prima!
+            
+            {
+                float hold;
+                float array[2] = {xuno, xtre};
+	        	
+	            for (int i = 0; i < 1; i++)
+
+                {
+	    
+                    for (int j = 0; j < 1; j++)
+	
+                    {
+	
+	                    if (array[j] > array[j + 1])
+            
+                        {
+		                    hold = array[j];
+			                array[j] = array[j + 1];
+                            array[j + 1] = hold;
+                        }
+                    
+                    }
+	
+                }
+
+	            for (int i = 0; i < 2; i++)
+	
+	            {
+	                cout << array[i] << endl;
+                }
+                
+            }
+            
+            else
+            
+            {
+                float hold;
+                float array[3] = {xuno, xdue, xtre};
+	        	
+	            for (int i = 0; i < 2; i++)
+
+                {
+	    
+                    for (int j = 0; j < 2; j++)
+	
+                    {
+	
+	                    if (array[j] > array[j + 1])
+            
+                        {
+		                    hold = array[j];
+			                array[j] = array[j + 1];
+                            array[j + 1] = hold;
+                        }
+                    
+                    }
+	
+                }
+
+	            for (int i = 0; i < 3; i++)
+	
+	            {
+	                cout << array[i] << endl;
+                }
+                
+            }
+        }
+    
+        else
+    
+        {
+            
+            if (delta1 == 0)
+            
+            {
+                float hold;
+                float array[3] = {xuno, xtre, xquattro};
+	        	
+	            for (int i = 0; i < 2; i++)
+
+                {
+	    
+                    for (int j = 0; j < 2; j++)
+	
+                    {
+	
+	                    if (array[j] > array[j + 1])
+            
+                        {
+		                    hold = array[j];
+			                array[j] = array[j + 1];
+                            array[j + 1] = hold;
+                        }
+                    
+                    }
+	
+                }
+
+	            for (int i = 0; i < 3; i++)
+	
+	            {
+	                cout << array[i] << endl;
+                }
+                
+            }
+            
+            if (delta2 == 0)
+            
+            {
+                float hold;
+                float array[3] = {xuno, xdue, xtre};
+	        	
+	            for (int i = 0; i < 2; i++)
+
+                {
+	    
+                    for (int j = 0; j < 2; j++)
+	
+                    {
+	
+	                    if (array[j] > array[j + 1])
+            
+                        {
+		                    hold = array[j];
+			                array[j] = array[j + 1];
+                            array[j + 1] = hold;
+                        }
+                    
+                    }
+	
+                }
+
+	            for (int i = 0; i < 3; i++)
+	
+	            {
+	                cout << array[i] << endl;
+                }
+                
+            }
+            
+            else if (delta1 != 0 && delta2 != 0)
+            
+            {
+                float hold;
+                float array[4] = {xuno, xdue, xtre, xquattro};
+	        	
+	            for (int i = 0; i < 3; i++)
+
+                {
+	    
+                    for (int j = 0; j < 3; j++)
+	
+                    {
+	
+	                    if (array[j] > array[j + 1])
+            
+                        {
+		                    hold = array[j];
+			                array[j] = array[j + 1];
+                            array[j + 1] = hold;
+                        }
+                    
+                    }
+	
+                }
+
+	            for (int i = 0; i < 4; i++)
+	
+	            {
+	                cout << array[i] << endl;
+                }
+                
+            } //fine dell'ultimo if
+        
+        } //fine dell'else
+	
+    } //fine di tutto il programma
 	
     cout << "\n\nPremi un qualsiasi tasto per uscire: ";
     cin.ignore();
