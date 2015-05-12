@@ -247,7 +247,7 @@ int main(){
     }
     
     cout << "\n\nPremere un qualsiasi tasto per uscire";    
-    cin.ignore();
+
     cin.get();    
     return EXIT_SUCCESS;
 }
