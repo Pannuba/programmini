@@ -366,7 +366,7 @@ int main(){
 	    cout << array[i] << endl;
 	}
 	
-	cout << xuno << xdue << xtre << xquattro;
+	cout << "\n\n";
 	
     }
 	
