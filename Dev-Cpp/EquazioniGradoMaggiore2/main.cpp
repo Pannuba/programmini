@@ -1,6 +1,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <math.h>
+#include <time.h>
 
 using namespace std;
 int main(){
@@ -87,7 +88,7 @@ int main(){
 			
 		}
 
-		delta1 = (b1*b1) - (4 * a1*c1); /* No pow(b, 2) ma (b*b) perchè pow converte la variabile in double (risultati non approssimati) */
+		delta1 = (b1*b1) - (4 * a1*c1); /* No pow(b, 2) ma (b*b) perchÃ¨ pow converte la variabile in double (risultati non approssimati) */
 
 		if (delta1 < 0)
 
@@ -155,7 +156,7 @@ int main(){
 		else if (delta1 > 0)
 
 		{
-			xuno = (-b1 - sqrt(delta1)) / (2 * a1); /* xuno è quello piccolo, xdue quello grande per una regola informale della matematica */
+			xuno = (-b1 - sqrt(delta1)) / (2 * a1); /* xuno Ã¨ quello piccolo, xdue quello grande per una regola informale della matematica */
 			xdue = (-b1 + sqrt(delta1)) / (2 * a1);
 			cout << "\n\nx1 = " << xuno << "    x2 = " << xdue;
 
@@ -225,7 +226,7 @@ int main(){
 			
 		}
 
-		delta2 = (b2*b2) - (4 * a2*c2); /* No pow(b, 2) ma (b*b) perchè pow converte la variabile in double (risultati non approssimati) */
+		delta2 = (b2*b2) - (4 * a2*c2); /* No pow(b, 2) ma (b*b) perchÃ¨ pow converte la variabile in double (risultati non approssimati) */
 
 		if (delta2 < 0)
 
@@ -293,7 +294,7 @@ int main(){
 		else if (delta2 > 0)
 
 		{
-			xtre = (-b2 - sqrt(delta2)) / (2 * a2); /* xuno è quello piccolo, xdue quello grande per una regola informale della matematica */
+			xtre = (-b2 - sqrt(delta2)) / (2 * a2); /* xuno Ã¨ quello piccolo, xdue quello grande per una regola informale della matematica */
 			xquattro = (-b2 + sqrt(delta2)) / (2 * a2);
 			cout << "\n\nx1 = " << xtre << "    x2 = " << xquattro;
 
@@ -325,40 +326,56 @@ int main(){
 	
     aunozero:	
     aduezero:
-    
-    if (a1 == 0 && a2 != 0)
-    
-    {
-           
-    
+      
+	float hold;
+	float array[4];
+	cout << "riscrivi le 4 x";
+	
+	for(int i = 0; i < 4; i++)
+	
+	{
+	    cin >> array[i];                                       //inserire automaticamente xuno, due, tre, quattro?
+	}
+	
+	cout << "Orignally entered array by the user is: ";
+	
+	for(int j = 0; j < 4; j++)
+	
+	{
+	    cout << array[j];
+	}
+
+	for(int i = 0; i < 3; i++)
+
+	{
+	
+	for(int j = 0; j < 3; j++)
+	
+	{
+	
+	    if(array[j] > array[j + 1])
+		
+		{
+		    hold = array[j];
+			array[j] = array[j + 1];
+			array[j + 1] = hold;
+		}
+	
+	}
+	
+	}
+	
+	cout << "Sorted Array is: ";
+
+	for(int i = 0; i < 4; i++)
+	
+	{
+	    cout << array[i];
+	}
+	
+	cout << xuno << xdue << xtre << xquattro;
+	
     }
-    
-    if (a1 != 0 && a2 == 0)
-    
-    {
-        cout << "
-     
-     
-     
-     
-     
-           
-    }
-    
-    else if (a1 != 0 && a2 != 0)
-    
-    {
-        cout << "
-     
-     
-     
-     
-         
-    }
-    
-     
-    		
-    }	
 	
     cout << "\n\nPremi un qualsiasi tasto per uscire: ";
     cin.ignore();
