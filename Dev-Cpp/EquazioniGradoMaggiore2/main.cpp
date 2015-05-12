@@ -328,21 +328,14 @@ int main(){
     aduezero:
       
 	float hold;
-	float array[4];
-	cout << "riscrivi le 4 x";
+	float array[4] = {xuno, xdue, xtre, xquattro};
 	
-	for(int i = 0; i < 4; i++)
-	
-	{
-	    cin >> array[i];                                       //inserire automaticamente xuno, due, tre, quattro?
-	}
-	
-	cout << "Orignally entered array by the user is: ";
+	cout << "xuno, xdue, xtre, xquattro in ordine sono:\n\n";
 	
 	for(int j = 0; j < 4; j++)
 	
 	{
-	    cout << array[j];
+	    cout << array[j] << endl;
 	}
 
 	for(int i = 0; i < 3; i++)
@@ -365,12 +358,12 @@ int main(){
 	
 	}
 	
-	cout << "Sorted Array is: ";
+	cout << "\n\nIn ordine dal piu basso al piu alto sono:\n\n";
 
 	for(int i = 0; i < 4; i++)
 	
 	{
-	    cout << array[i];
+	    cout << array[i] << endl;
 	}
 	
 	cout << xuno << xdue << xtre << xquattro;
