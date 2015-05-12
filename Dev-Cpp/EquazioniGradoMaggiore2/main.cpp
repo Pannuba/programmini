@@ -186,262 +186,129 @@ int main(){
         }
 		
 		aduezero:
+                 
+                 
+        /* ora viene il bello*/
+        
     
-        if (a1 == 0) //nella prima equazione ho solo una soluzione
-    
+        if ((delta1 < 0 && delta2 < 0) || (a1 == 0 && delta2 < 0) || (a2 == 0 && delta1 < 0))  //sbagliato, ho fatto casino, da correggere
+            
         {
-            if (delta2 == 0) //anche nella seconda!
-            
-            {
-                float hold;
-                float array[2] = {xuno, xtre};
-	        	
-	            for (int i = 0; i < 1; i++)
-
-                {
-	    
-                    for (int j = 0; j < 1; j++)
-	
-                    {
-	
-	                    if (array[j] > array[j + 1])
-            
-                        {
-		                    hold = array[j];
-			                array[j] = array[j + 1];
-                            array[j + 1] = hold;
-                        }
-                    
-                    }
-	
-                }
-	
-                //cout << "\n\nIn ordine dal piu basso al piu alto sono:\n\n";
-
-	            for (int i = 0; i < 2; i++)
-	
-	            {
-	                cout << array[i] << endl;
-                }
-                
-            }
-            
-            else
-            
-            {
-                float hold;
-                float array[3] = {xuno, xtre, xquattro};
-	        	
-	            for (int i = 0; i < 2; i++)
-
-                {
-	    
-                    for (int j = 0; j < 2; j++)
-	
-                    {
-	
-	                    if (array[j] > array[j + 1])
-            
-                        {
-		                    hold = array[j];
-			                array[j] = array[j + 1];
-                            array[j + 1] = hold;
-                        }
-                    
-                    }
-	
-                }
-	
-                //cout << "\n\nIn ordine dal piu basso al piu alto sono:\n\n";
-
-	            for (int i = 0; i < 3; i++)
-	
-	            {
-	                cout << array[i] << endl;
-                }
-                
-            }
+            cout << "\n\nNon esistono soluzioni"; //aggiungere i casi dei segni                
         }
-    
-        if (a2 == 0) //nella seconda equazione ho solo una soluzione!
-    
+        
+        if ((delta1 == 0 && delta2 == 0) || (a1 == 0 && delta2 == 0) || (a2 == 0 && delta1 == 0))
+            
         {
-            if (delta1 == 0) //anche nella prima!
+            if (xuno > xtre)
             
             {
-                float hold;
-                float array[2] = {xuno, xtre};
-	        	
-	            for (int i = 0; i < 1; i++)
-
-                {
-	    
-                    for (int j = 0; j < 1; j++)
-	
-                    {
-	
-	                    if (array[j] > array[j + 1])
-            
-                        {
-		                    hold = array[j];
-			                array[j] = array[j + 1];
-                            array[j + 1] = hold;
-                        }
-                    
-                    }
-	
-                }
-
-	            for (int i = 0; i < 2; i++)
-	
-	            {
-	                cout << array[i] << endl;
-                }
-                
+                swap(xuno, xtre);
             }
-            
-            else
-            
-            {
-                float hold;
-                float array[3] = {xuno, xdue, xtre};
-	        	
-	            for (int i = 0; i < 2; i++)
-
-                {
-	    
-                    for (int j = 0; j < 2; j++)
-	
-                    {
-	
-	                    if (array[j] > array[j + 1])
-            
-                        {
-		                    hold = array[j];
-			                array[j] = array[j + 1];
-                            array[j + 1] = hold;
-                        }
-                    
-                    }
-	
-                }
-
-	            for (int i = 0; i < 3; i++)
-	
-	            {
-	                cout << array[i] << endl;
-                }
                 
-            }
         }
-    
+        
+        if (a1 == 0 || delta2 == 0)
+        
+        {
+            float hold; ///////////////////////////////////////////////////////aggiungere float hold e int i 0 all inizio
+            float array[3] = {xuno, xtre, xquattro};
+	        	
+            for (int i = 0; i < 2; i++)
+
+            {
+	    
+                for (int j = 0; j < 2; j++)
+	
+                {
+	
+                    if (array[j] > array[j + 1])
+            
+                    {
+                        hold = array[j];
+                        array[j] = array[j + 1];
+                        array[j + 1] = hold;
+                    }
+                    
+                }
+	
+            }
+	
+            for (int i = 0; i < 3; i++)
+	
+            {
+                cout << array[i] << endl;
+            }
+                
+        }
+        
+        if (a2 == 0 || delta1 == 0)
+        
+        {
+            float hold;
+            float array[3] = {xuno, xdue, xtre};
+	        	
+            for (int i = 0; i < 2; i++)
+
+            {
+	    
+                for (int j = 0; j < 2; j++)
+	
+                {
+	
+                    if (array[j] > array[j + 1])
+            
+                    {
+                        hold = array[j];
+                        array[j] = array[j + 1];
+                        array[j + 1] = hold;
+                    }
+                    
+                }
+	
+            }
+	
+            for (int i = 0; i < 3; i++)
+	
+            {
+                cout << array[i] << endl;
+            }
+                
+        }
+        
         else
     
-        {
-            
-            if (delta1 == 0)
-            
-            {
-                float hold;
-                float array[3] = {xuno, xtre, xquattro};
+        {          
+            float hold;
+            float array[4] = {xuno, xdue, xtre, xquattro};
 	        	
-	            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < 3; i++)
 
-                {
+            {
 	    
-                    for (int j = 0; j < 2; j++)
+                for (int j = 0; j < 3; j++)
 	
-                    {
+                {
 	
-	                    if (array[j] > array[j + 1])
+                    if (array[j] > array[j + 1])
             
-                        {
-		                    hold = array[j];
-			                array[j] = array[j + 1];
-                            array[j + 1] = hold;
-                        }
-                    
+                    {
+                        hold = array[j];
+                        array[j] = array[j + 1];
+                        array[j + 1] = hold;
                     }
-	
-                }
-
-	            for (int i = 0; i < 3; i++)
-	
-	            {
-	                cout << array[i] << endl;
+                    
                 }
                 
             }
-            
-            if (delta2 == 0)
-            
+
+            for (int i = 0; i < 4; i++)
+	
             {
-                float hold;
-                float array[3] = {xuno, xdue, xtre};
-	        	
-	            for (int i = 0; i < 2; i++)
-
-                {
-	    
-                    for (int j = 0; j < 2; j++)
-	
-                    {
-	
-	                    if (array[j] > array[j + 1])
-            
-                        {
-		                    hold = array[j];
-			                array[j] = array[j + 1];
-                            array[j + 1] = hold;
-                        }
-                    
-                    }
-	
-                }
-
-	            for (int i = 0; i < 3; i++)
-	
-	            {
-	                cout << array[i] << endl;
-                }
-                
+                cout << array[i] << endl;
             }
-            
-            else if (delta1 != 0 && delta2 != 0)
-            
-            {
-                float hold;
-                float array[4] = {xuno, xdue, xtre, xquattro};
-	        	
-	            for (int i = 0; i < 3; i++)
-
-                {
-	    
-                    for (int j = 0; j < 3; j++)
-	
-                    {
-	
-	                    if (array[j] > array[j + 1])
-            
-                        {
-		                    hold = array[j];
-			                array[j] = array[j + 1];
-                            array[j + 1] = hold;
-                        }
-                    
-                    }
-	
-                }
-
-	            for (int i = 0; i < 4; i++)
-	
-	            {
-	                cout << array[i] << endl;
-                }
-                
-            } //fine dell'ultimo if
         
-        } //fine dell'else
+        }
 	
     } //fine di tutto il programma
 	
