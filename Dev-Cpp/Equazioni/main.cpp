@@ -1,14 +1,15 @@
 #include <cstdlib>
 #include <iostream>
 #include <math.h>
-
+#include <string>
 using namespace std;
+
 int main(){
     
     system("color a");   
     float a, b, c, delta, xuno, xdue;
     cout << "PannRisolutoreDiEquazioniDiSecondoGrado 0.0.1 beta";
-    cout << "\n\n\n\nInserisci i valori a, b, c dell'equazione ax2 + bx + c = 0 :";
+    cout << "\n\nInserisci i valori a, b, c dell'equazione ax2 + bx + c = 0 :";
     
     for ( ;; )
     

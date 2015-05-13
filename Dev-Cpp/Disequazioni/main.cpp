@@ -71,36 +71,25 @@ int main(){
 			
 		}
 
-		delta = (b*b) - (4 * a*c); /* No pow(b, 2) ma (b*b) perchè pow converte la variabile in double (risultati non approssimati) */
+		delta = (b*b) - (4 * a*c); /* No pow(b, 2) ma (b*b) perche' pow converte la variabile in double (risultati non approssimati) */
 
 		if (delta < 0)
 
 		{
 			cout << "\n\nIl delta e' minore di 0, quindi non esistono soluzioni all'equazione";
 
-			if (segno == 1)
+			if (segno == 1 || segno == 3)
 
 			{
 				cout << "\n\nPer ogni x appartenente a R    S = R\n\n";
 			}
 
-			if (segno == 2)
+			if (segno == 2 || segno == 4)
 
 			{
 				cout << "\n\nNon esiste x appartenente a R    S = vuoto\n\n";
 			}
-
-			if (segno == 3)
-
-			{
-				cout << "\n\nPer ogni x appartenente a R    S = R\n\n";
-			}
-
-			if (segno == 4)
-
-			{
-				cout << "\n\nNon esiste x appartenente a R    S = vuoto\n\n";
-			}
+			
 		}
 
 		if (delta == 0)
@@ -139,7 +128,7 @@ int main(){
 		else if (delta > 0)
 
 		{
-			xuno = (-b - sqrt(delta)) / (2 * a); /* xuno è quello piccolo, xdue quello grande per una regola informale della matematica */
+			xuno = (-b - sqrt(delta)) / (2 * a); /* xuno e' quello piccolo, xdue quello grande per una regola informale della matematica */
 			xdue = (-b + sqrt(delta)) / (2 * a);
 			cout << "\n\nx1 = " << xuno << "    x2 = " << xdue;
 
