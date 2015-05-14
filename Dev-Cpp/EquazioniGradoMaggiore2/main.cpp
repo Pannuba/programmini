@@ -466,6 +466,18 @@ int main(){
             cout << "x " << segnotot << " " << xtre << "\n\n";
         }
         
+        if (a1 == 0 && delta2 < 0)
+        
+        {
+            cout << "\n\nL'unica soluzione è " << xuno; //no xuno, ma usando i simbili amfgiore e minore
+        }
+        
+        if (a2 == 0 && delta1 < 0)
+        
+        {
+            cout << "\n\nL'unica soluzione è " << xdue; //no xdue, ma usando i simboli maggiore e minore
+        }
+        
         if ((delta1 == 0 && delta2 == 0) || (a1 == 0 && delta2 == 0) || (a2 == 0 && delta1 == 0))
             
         {
@@ -567,8 +579,7 @@ int main(){
                 }
                 
                 cout << "___" << xuno << "___" << xdue << "___" << xtre << "___" << xquattro << "___";
-                
-                
+                                
             }
 
             for (i; i < 4; i++)  //serben?
