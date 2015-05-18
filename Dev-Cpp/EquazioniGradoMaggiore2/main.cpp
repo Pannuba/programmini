@@ -1,7 +1,6 @@
 #include <cstdlib>
 #include <iostream>
 #include <math.h>
-#include <time.h>
 #include <string>
 using namespace std;
 
@@ -43,7 +42,7 @@ int main(){
         cout << "\nMaggiore ( > ), minore ( < ), maggioreuguale ( >= ) o minoreuguale ( <= ) a 0? "; // se non va lorimeto rpima ckn i numeri
 		cin >> segnotot;
 
-		while ((segnotot != ">") && (segnotot != "<") && (segnotot != ">=") && (segnotot != "<="))
+		while (segnotot != ">" && segnotot != "<" && segnotot != ">=" && segnotot != "<=")
 
 		{
 			cout << "\nInserire > , < , >= o <= : ";

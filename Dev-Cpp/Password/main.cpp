@@ -7,21 +7,21 @@ int main(){
     
     system("color a");
     string passwordvera, password;
-    passwordvera = "psw";
+    passwordvera = "uno due tre quattro";
     cout << "Inserisci password: ";
-    cin >> password;
+    getline(cin, password);
     
     while (password != passwordvera)
     
     {
         cout << "\nPassword errata, 2 tentativi rimanente: ";
-        cin >> password;
+        getline(cin, password);
         
         if (password != passwordvera)
         
         {
             cout << "\nPassword errata, 1 tentativo rimanente: ";
-            cin >> password;
+            getline(cin, password);
             
             if (password != passwordvera)
             

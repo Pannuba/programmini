@@ -1,14 +1,13 @@
 #include <cstdlib>
 #include <iostream>
 #include <math.h>
-#include <string>
 using namespace std;
 
 int main(){
     
     system("color a");   
     float a, b, c, delta, xuno, xdue;
-    cout << "PannRisolutoreDiEquazioniDiSecondoGrado 0.0.1 beta";
+    cout << "PannRisolutoreDiEquazioniDiSecondoGrado";
     cout << "\n\nInserisci i valori a, b, c dell'equazione ax2 + bx + c = 0 :";
     
     for ( ;; )
@@ -31,7 +30,7 @@ int main(){
     
         delta = (b*b) - (4 * a*c); /* No pow(b, 2) ma b * b perche pow converte la variabile in double */
     
-        if (delta < 0)
+        if (delta << 0)
     
         {
             cout << "\n\nIl delta e' minore di 0, quindi non esistono soluzioni all'equazione\n\n";

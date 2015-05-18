@@ -2,14 +2,14 @@
 #include <iostream>
 #include <math.h>
 #include <string>
-
 using namespace std;
+
 int main(){
 
     system("color a");
-	string b;
-	float a, c, d;
-	cout << "PannubaCalc 0.0.1 beta";
+	string operazione;
+	float a, c, risultato;
+	cout << "PannubaCalc";
 	
 	for ( ;; )
 	
@@ -17,43 +17,43 @@ int main(){
         cout << "\n\nInserisci il primo valore: ";
         cin >> a;
         cout << "\nL'operazione dev'essere:\n\nuna somma\nuna sottrazione\nuna moltiplicazione\nuna divisione\nil calcolo di una radice\nun elevamento a potenza? ";
-        cin >> b;
+        cin >> operazione;
         
-        while (b != "somma" && b != "sottrazione" && b != "moltiplicazione" && b != "divisione" && b != "potenza" && b != "radice")
+        while (operazione != "somma" && operazione != "+" && operazione != "sottrazione" && operazione != "-" && operazione != "moltiplicazione" && operazione != "x" && operazione != "divisione" && operazione != ":" && operazione != "potenza" && operazione != "elevamento" && operazione != "radice")
         
         {
             cout << "\nInserisci un tipo di operazione: ";
-            cin >> b;
+            cin >> operazione;
         }
         
-        if (b == "somma")
+        if (operazione == "somma" || operazione == "+")
         
         {
             cout << "\nInserisci il secondo valore: ";
             cin >> c;
-            d = a + c;
-            cout << "\nIl risultato e': " << d << "\n\n";
+            risultato = a + c;
+            cout << "\nIl risultato e' " << risultato << "\n\n";
         }
         
-        if (b == "sottrazione")
+        if (operazione == "sottrazione" || operazione == "-")
         
         {
             cout << "\nInserisci il secondo valore: ";
             cin >> c;
-            d = a - c;
-            cout << "\nIl risultato e': " << d << "\n\n";
+            risultato = a - c;
+            cout << "\nIl risultato e' " << risultato << "\n\n";
         }
         
-        if (b == "moltiplicazione")
+        if (operazione == "moltiplicazione" || operazione == "x")
         
         {
             cout << "\nInserisci il secondo valore: ";
             cin >> c;
-            d = a*c;
-            cout << "\nIl risultato e': " << d << "\n\n";
+            risultato = a*c;
+            cout << "\nIl risultato e' " << risultato << "\n\n";
         }
         
-        if (b == "divisione")
+        if (operazione == "divisione" || operazione == ":")
         
         {
             cout << "\nInserisci il secondo valore: ";
@@ -66,24 +66,32 @@ int main(){
                 cin >> c;
             }
 	      
-            d = a / c;
-            cout << "\nIl risultato e': " << d << "\n\n";
+            risultato = a / c;
+            cout << "\nIl risultato e' " << risultato << "\n\n";
         }
         
-        if (b == "radice")
+        if (operazione == "radice")
         
         {
-            c = sqrt(a);
-            cout << "\nIl risultato e': " << c << "\n\n";
+            
+            while (a < 0)
+            
+            {
+                cout << "\nLa radice quadrata di un numero negativo non esiste! Reinserire numero: ";
+                cin >> a;
+            }
+            
+            risultato = sqrt(a);
+            cout << "\nIl risultato e' " << risultato << "\n\n";
         }
         
-        if (b == "potenza")
+        if (operazione == "potenza" || operazione == "elevamento")
         
         {
             cout << "\nInserisci l'esponente: ";
             cin >> c;
-            d = pow(a, c);
-            cout<<"\nIl risultato e': " << d << "\n\n";
+            risultato = pow(a, c);
+            cout<<"\nIl risultato e' " << risultato << "\n\n";
         }
 	
     }		

@@ -9,9 +9,9 @@ int main(){
     string giocatore1, giocatore2, giocare;    
     float a, b;
     cout << "In questo gioco vince chi inserisce il numero piu alto\n\nGiocatore 1, come ti chiami? ";
-    cin >> giocatore1;
+    getline(cin, giocatore1);
     cout << "\nGiocatore 2, come ti chiami? ";
-    cin >> giocatore2;
+    getline(cin, giocatore2);
     
     for ( ;; )
     

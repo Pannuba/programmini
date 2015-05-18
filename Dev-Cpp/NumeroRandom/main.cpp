@@ -1,19 +1,17 @@
 #include <iostream>
 #include <cstdlib>
-#include <math.h>
-#include <time.h>
 #include <string>
 using namespace std;
 
 int main(){
 	
     system("color a");
-    string giocatore1, giocatore2, giocare;    
+    string giocatore1, giocatore2, giocare;
     float num1, num2;
     cout << "In questo gioco vince chi estrae il numero piu' alto\n\nGiocatore 1, come ti chiami? ";
-    cin >> giocatore1;
+    getline(cin, giocatore1);
     cout << "\nGiocatore 2, come ti chiami? ";
-    cin >> giocatore2;
+    getline(cin, giocatore2);
     srand(time(0));
     
     for ( ;; )
@@ -44,14 +42,29 @@ int main(){
         
     	cout << "Volete giocare ancora? ";
     	cin >> giocare;
+    	
+    	while (giocare != "si" && giocare != "no" && giocare != "Si" && giocare != "No")
+    	
+    	{
+            cout << "\nSi o no: ";
+            cin >> giocare;
+            
+            if (giocare == "o")
         
-    	if (giocare == "si") /* Come faccio a dire "se giocare = si O giocare = Si" --> allora...? */
+            {
+                cout << "\nAhah bella battuta! Ora inserisci 'si' oppure 'no' ";
+                cin >> giocare;
+            }
+            
+        }
+        
+    	if (giocare == "si" || giocare == "Si")
         
     	{
-        
+            // lol spazio vuoto
     	}
         
-    	if (giocare == "no")
+    	else if (giocare == "no" || giocare == "No")
         
     	{
             break;

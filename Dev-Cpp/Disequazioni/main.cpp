@@ -1,14 +1,15 @@
 #include <cstdlib>
 #include <iostream>
 #include <math.h>
+#include <string>
 
 using namespace std;
 int main(){
     
     system("color a");
-	int segno;
+	string segno;
 	float a, b, c, delta, xuno, xdue;
-	cout << "PannRisolutoreDiDisquazioniDiSecondoGrado 0.0.1 beta";
+	cout << "PannRisolutoreDiDisquazioniDiSecondoGrado";
 	cout << "\n\nInserisci i valori a, b, c dell'equazione ax2 + bx + c :";
 
 	for ( ;; )
@@ -31,7 +32,7 @@ int main(){
 		cout << "\nMaggiore (1), minore (2), maggioreuguale (3) o minoreuguale (4) a 0? ";
 		cin >> segno;
 
-		while (segno << 1 && segno >> 4)
+		while (segno != "1" && segno != "2" && segno != "3" && segno != "4")
 
 		{
 			cout << "\nInserire un valore compreso tra 1 e 4: ";
@@ -45,28 +46,28 @@ int main(){
 	        b = b * (-1);
 			c = c * (-1);
 
-			if (segno == 1)
+			if (segno == "1")
 
 			{
-				segno = 2;
+				segno = "2";
 			}
 
-			else if (segno == 2)
+			else if (segno == "2")
 
 			{
-				segno = 1;
+				segno = "1";
 			}
 
-			if (segno == 3)
+			if (segno == "3")
 
 			{
-			    segno = 4;
+			    segno = "4";
 			}
 
-			else if (segno == 4)
+			else if (segno == "4")
 
 			{
-				segno = 3;
+				segno = "3";
 			}
 			
 		}
@@ -78,13 +79,13 @@ int main(){
 		{
 			cout << "\n\nIl delta e' minore di 0, quindi non esistono soluzioni all'equazione";
 
-			if (segno == 1 || segno == 3)
+			if (segno == "1" || segno == "3")
 
 			{
 				cout << "\n\nPer ogni x appartenente a R    S = R\n\n";
 			}
 
-			if (segno == 2 || segno == 4)
+			if (segno == "2" || segno == "4")
 
 			{
 				cout << "\n\nNon esiste x appartenente a R    S = vuoto\n\n";
@@ -99,25 +100,25 @@ int main(){
 			xuno = (-b + sqrt(delta)) / (2 * a);
 			cout << "x1 = x2 = " << xuno;
 
-			if (segno == 1)
+			if (segno == "1")
 
 			{
 				cout << "\n\nPer ogni x diverso da " << xuno << "    S = R - {" << xuno << "}\n\n";
 			}
 
-			if (segno == 2)
+			if (segno == "2")
 
 			{
 				cout << "\n\nNon esiste x appartenente a R    S = vuoto\n\n";
 			}
 
-			if (segno == 3)
+			if (segno == "3")
 
 			{
 				cout << "\n\nPer ogni x appartenente a R    S = R\n\n";
 			}
 
-			if (segno == 4)
+			if (segno == "4")
 
 			{
 				cout << "\n\nx = " << xuno << "    S = {" << xuno << "}\n\n";
@@ -132,25 +133,25 @@ int main(){
 			xdue = (-b + sqrt(delta)) / (2 * a);
 			cout << "\n\nx1 = " << xuno << "    x2 = " << xdue;
 
-			if (segno == 1)
+			if (segno == "1")
 
 			{
 				cout << "\n\nx < " << xuno << " v x > " << xdue << "    S = ] -infinito , " << xuno << " [ U ] " << xdue << " , +infinito [\n\n";
 			}
 
-			if (segno == 2)
+			if (segno == "2")
 
 			{
 				cout << "\n\n" << xuno << " < x < " << xdue << "    S = ] " << xuno << " , " << xdue << " [\n\n";
 			}
 
-			if (segno == 3)
+			if (segno == "3")
 
 			{
 				cout << "\n\nx <= " << xuno << " v x >= " << xdue << "    S = ] -infinito , " << xuno << " ] U [ " << xdue << " , +infinito [\n\n";
 			}
 
-			if (segno == 4)
+			if (segno == "4")
 
 			{
 				cout << "\n\n" << xuno << " <= x <= " << xdue << "    S = [ " << xuno << " , " << xdue << " ]\n\n";

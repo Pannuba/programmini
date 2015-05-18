@@ -1,13 +1,13 @@
 #include <cstdlib>
 #include <iostream>
 #include <math.h>
-
 using namespace std;
+
 int main(){
     
     system("color a");   
     float a, b, c, delta, vx, vy;
-    cout << "PannTrovaCoordinateVerticeParabole 0.0.1 beta";
+    cout << "PannTrovaCoordinateVerticeParabole";
     cout << "\n\n\n\nInserisci i valori a, b, c dell'equazione y = ax2 + bx + c:";
     
     for ( ;; )
@@ -50,7 +50,7 @@ int main(){
             cout << "\n\nb e c sono uguali a 0, quindi il vertice della parabola coincide con l'origine del piano";
         }
         
-        cout << "\n\nVx = " << vx << "    Vy = " << vy << "\n\nV(" << vx << "; " << vy << ")\n\n";  
+        cout << "\n\nVx = " << vx << "    Vy = " << vy << "\n\nV (" << vx << "; " << vy << ")\n\n";  
     }
     
     cout << "\n\nPremi un qualsiasi tasto per uscire: ";
