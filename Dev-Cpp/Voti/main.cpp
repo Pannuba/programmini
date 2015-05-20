@@ -7,14 +7,15 @@ using namespace std;
 int main(){
 	
 	system("color a");
-	int i = 0;
-    float tot, voti[i], media;         // Se tolgo i = 0 va in crisi
+	int i = 0, votiok;
+    float tot, voti[i], somma, media;         // Se tolgo i = 0 va in crisi
     cout << "PannCalcolaMedie\n\n";
     
 	for ( ;; )
 	
 	{
-        float somma = 0;
+        votiok = 0;
+        somma = 0;
         cout << "Numero totale voti? ";
 		cin >> tot;
 		cout << "\n";
@@ -46,14 +47,29 @@ int main(){
 		for (i = 0; i < tot; i++)
 		
 		{
+            
             if (voti[i] >= 6)
             
             {
-                
+                votiok++;
             }
             
         }
-                
+        
+        if (votiok <= 0)
+        
+        {
+            cout << "Voti sufficienti: 0    (ahia...)";
+            cout << "\nVoti insufficienti: " << tot << "\n\n\n\n";
+        }
+        
+        else
+        
+        {
+            cout << "Voti sufficienti: " << votiok;
+            cout << "\nVoti insufficienti: " << tot - votiok << "\n\n\n\n";
+        }
+        
 	}
 	
 	cin.ignore();
