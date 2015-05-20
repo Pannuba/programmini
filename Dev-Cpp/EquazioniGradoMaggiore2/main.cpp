@@ -1,6 +1,6 @@
 #include <cstdlib>
 #include <iostream>
-#include <math.h>
+#include <cmath>
 #include <string>
 using namespace std;
 
@@ -138,29 +138,18 @@ int main(){
 		{
 			cout << "\n\nIl delta e' minore di 0, quindi non esistono soluzioni all'equazione";
 			
-			if (segno1 == 1)
+			if (segno1 == 1 || segno1 == 3)
 
 			{
 				cout << "\n\nPer ogni x appartenente a R    S = R\n\n";
 			}
 
-			if (segno1 == 2)
+			else if (segno1 == 2 || segno1 == 4)
 
 			{
 				cout << "\n\nNon esiste x appartenente a R    S = vuoto\n\n";
 			}
 
-			if (segno1 == 3)
-
-			{
-				cout << "\n\nPer ogni x appartenente a R    S = R\n\n";
-			}
-
-			if (segno1 == 4)
-
-			{
-				cout << "\n\nNon esiste x appartenente a R    S = vuoto\n\n";
-			}
 		}
 
 		if (delta1 == 0)
@@ -305,28 +294,16 @@ int main(){
 		{
 		    cout << "\n\nNon esistono soluzioni";
 		    
-			if (segno2 == 1)
+			if (segno2 == 1 || segno2 == 3)
 
 			{
 				cout << "\n\nPer ogni x appartenente a R    S = R\n\n";
 			}
 
-			if (segno2 == 2)
-
-			{
-				cout << "\n\nNon esiste x appartenente a R    S = vuoto\n\n";
-			}
-
-			if (segno2 == 3)
+			else if (segno2 == 3 || segno2 == 4)
 
 			{
 				cout << "\n\nPer ogni x appartenente a R    S = R\n\n";
-			}
-
-			if (segno2 == 4)
-
-			{
-				cout << "\n\nNon esiste x appartenente a R    S = vuoto\n\n";
 			}
 			
 		}

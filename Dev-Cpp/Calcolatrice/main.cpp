@@ -1,6 +1,6 @@
 #include <cstdlib>
 #include <iostream>
-#include <math.h>
+#include <cmath>
 #include <string>
 using namespace std;
 
@@ -16,7 +16,7 @@ int main(){
 	{
         cout << "\n\nInserisci il primo valore: ";
         cin >> a;
-        cout << "\nL'operazione dev'essere:\n\nuna somma\nuna sottrazione\nuna moltiplicazione\nuna divisione\nil calcolo di una radice\nun elevamento a potenza? ";
+        cout << "\nL'operazione dev'essere una:\n\nsomma\nsottrazione\nmoltiplicazione\ndivisione\ncalcolo di una radice\nelevamento a potenza? ";
         cin >> operazione;
         
         while (operazione != "somma" && operazione != "+" && operazione != "sottrazione" && operazione != "-" && operazione != "moltiplicazione" && operazione != "x" && operazione != "divisione" && operazione != ":" && operazione != "potenza" && operazione != "elevamento" && operazione != "radice")
@@ -90,7 +90,7 @@ int main(){
         {
             cout << "\nInserisci l'esponente: ";
             cin >> c;
-            risultato = pow(a, c);
+            risultato = powf(a, c);
             cout<<"\nIl risultato e' " << risultato << "\n\n";
         }
 	

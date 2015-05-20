@@ -1,22 +1,25 @@
 #include <iostream>
 #include <cstdlib>
-#include <math.h>
+#include <cmath>
 #include <string>
 using namespace std;
 
 int main(){
 	
 	system("color a");
-	int tot, i = 0, voti[i], somma = 0, media, sommah;
-	
+	int i = 0;
+    float tot, voti[i], media;         // Se tolgo i = 0 va in crisi
+    cout << "PannCalcolaMedie\n\n";
+    
 	for ( ;; )
 	
 	{
-	
-	    cout << "Numero totale voti? ";
+        float somma = 0;
+        cout << "Numero totale voti? ";
 		cin >> tot;
+		cout << "\n";
 		
-		for (i; i < tot; i++)
+        for (i = 0; i < tot; i++)
 		
 		{
 	        cout << "Inserisci voto " << i + 1 << ": ";
@@ -28,17 +31,29 @@ int main(){
 			    cout << "Inserire un numero compreso tra 0 e 10: ";
 			    cin >> voti[i];
 			}
+			
 		}
-	
-		for(i; i < tot; i++)
+
+		for (i = 0; i < tot; i++)                /* Devo rimettere i = 0 altrimenti usa l'i = n di prima */
 	
 		{
 		    somma = somma + voti[i];
 		}
 	
 		media = somma / tot;
-		cout << "Media: " << media << "\n\n";
-	
+		cout << "\nMedia: " << media << "\n\n";
+		
+		for (i = 0; i < tot; i++)
+		
+		{
+            if (voti[i] >= 6)
+            
+            {
+                
+            }
+            
+        }
+                
 	}
 	
 	cin.ignore();
