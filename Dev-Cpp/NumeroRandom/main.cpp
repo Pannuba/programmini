@@ -6,13 +6,13 @@ using namespace std;
 int main(){
 	
     system("color a");
+    srand(time(0));
     string giocatore1, giocatore2, giocare;
     float num1, num2;
     cout << "In questo gioco vince chi estrae il numero piu' alto\n\nGiocatore 1, come ti chiami? ";
     getline(cin, giocatore1);
     cout << "\nGiocatore 2, come ti chiami? ";
     getline(cin, giocatore2);
-    srand(time(0));
     
     for ( ;; )
     

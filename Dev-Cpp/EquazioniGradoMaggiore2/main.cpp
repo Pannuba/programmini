@@ -470,11 +470,11 @@ int main(){
         {             //aggiungere float hold e int i 0 all inizio
             float array[3] = {xuno, xtre, xquattro};
 	        	
-            for (i; i < 2; i++)
+            for (i = 0; i < 2; i++)
 
             {
 	    
-                for (j; j < 2; j++)
+                for (j = 0; j < 2; j++)
 	
                 {
 	
@@ -490,7 +490,7 @@ int main(){
 	
             }
 	
-            for (i; i < 3; i++)
+            for (i = 0; i < 3; i++)
 	
             {
                 cout << array[i] << endl;
@@ -503,11 +503,11 @@ int main(){
         {
             float array[3] = {xuno, xdue, xtre};
 	        	
-            for (i; i < 2; i++)
+            for (i = 0; i < 2; i++)
 
             {
 	    
-                for (j; j < 2; j++)
+                for (j = 0; j < 2; j++)
 	
                 {
 	
@@ -523,7 +523,7 @@ int main(){
 	
             }
 	
-            for (i; i < 3; i++)
+            for (i = 0; i < 3; i++)
 	
             {
                 cout << array[i] << endl;
@@ -536,11 +536,11 @@ int main(){
         {          
             float array[4] = {xuno, xdue, xtre, xquattro};
 	        	
-            for (i; i < 3; i++)
+            for (i = 0; i < 3; i++)
 
             {
 	    
-                for (j; j < 3; j++)
+                for (j = 0; j < 3; j++)
 	
                 {
 	
@@ -558,7 +558,7 @@ int main(){
                                 
             }
 
-            for (i; i < 4; i++)  //serben?
+            for (i = 0; i < 4; i++)  //serben? Si
 	
             {
                 cout << array[i] << endl; //questo serben?

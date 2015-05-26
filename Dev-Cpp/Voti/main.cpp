@@ -7,7 +7,7 @@ using namespace std;
 int main(){
 	
 	system("color a");
-	int i = 0, votiok;
+	unsigned long long int i = 0, votiok;
     float tot, voti[i], somma, media;         // Se tolgo i = 0 va in crisi
     cout << "PannCalcolaMedie\n\n";
     

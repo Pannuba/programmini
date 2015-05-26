@@ -3,20 +3,21 @@
 #include <cmath>
 #include <string>
 using namespace std;
-
 int main(){
 	
 	system("color a");
-	int i = 0;
-    float tot, valori[i], somma, media;         // Se tolgo i = 0 va in crisi
-    cout << "PannCoseSullaStatistica\n\n";
+	unsigned long long int i = 0, j = 0;
+    float tot, valori[i], somma, media, hold;         // Se tolgo i = 0 va in crisi
+    
+    cout << "PannCoseSullaStatistica";
     
 	for ( ;; )
 	
 	{
         somma = 0;
-        cout << "Numero totale elementi? ";
+        cout << "\n\nNumero totale elementi? ";
 		cin >> tot;
+        float a = tot;
 		cout << "\n";
 		
         for (i = 0; i < tot; i++)
@@ -27,13 +28,42 @@ int main(){
 		}
 
 		for (i = 0; i < tot; i++)                /* Devo rimettere i = 0 altrimenti usa l'i = n di prima */
-	
+
 		{
 		    somma = somma + valori[i];
 		}
 	
 		media = somma / tot;
-		cout << "\nMedia: " << media << "\n\n";
+		cout << "\nMedia: " << media;
+		
+        for (i = 0; i < (tot - 1); i++)
+        
+        {
+	        
+            for (j = 0; j < (tot - 1); j++)
+	
+            {
+	
+                if (valori[j] > valori[j + 1])
+            
+                {
+                    hold = valori[j];
+                    valori[j] = valori[j + 1];
+                    valori[j + 1] = hold;
+                }
+                    
+            }
+	
+        }
+	
+        cout << "\n\nIn ordine dal piu basso al piu alto sono:\n\n";
+
+        for (i = 0; i < tot; i++)
+	
+        {
+	        cout << valori[i] << endl;
+        }   
+            
 	}
 	
 	cin.ignore();
