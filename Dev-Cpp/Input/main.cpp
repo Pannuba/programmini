@@ -1,15 +1,19 @@
 #include <iostream>
+#include <cstdlib>
 #include <fstream>
 using namespace std;
 
 int main(){
 	
-	ofstream file;
-	int uno, due, tre;
-	cin >> uno; cin >> due; cin >> tre;
-	file.open("zeDispenser.heh"); // Il file che crea si chiama zeDispenser.heh // Aggiungere percorso?
-	file << uno << ", " << due << ", " << tre; // Scrive nel file questa roba
-	cin.ignore();
+	system ("color a");
+	cout << "Tecst Editor\n\n";
+	string testo;
+    ofstream file;
+    file.open("zeDispenser.txt");
+    getline (cin, testo); // Il file che crea si chiama zeDispenser.txt // Aggiungere percorso?
+	file << testo; // Scrive nel file questa robba
+    cout << "\n\nPremi qualsiasi tasto per uscire";
+    cin.ignore();
 	cin.get();
-	return 0;
+	return EXIT_SUCCESS;
 }
