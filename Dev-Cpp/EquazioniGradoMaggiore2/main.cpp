@@ -2,8 +2,8 @@
 #include <iostream>
 #include <cmath>
 #include <string>
-using namespace std;
-
+using namespace std;// Cambiare errori in cerr << , aggiungere while (cin.fail() == true){cin.clear();cerr << "\nInserisci un numero: ";cin.ignore();cin >> ax;}
+            
 int main(){
 
     system("color a");

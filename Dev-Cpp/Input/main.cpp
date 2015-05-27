@@ -13,6 +13,7 @@ int main(){
     getline (cin, testo); // Il file che crea si chiama zeDispenser.txt // Aggiungere percorso?
 	file << testo; // Scrive nel file questa robba
     cout << "\n\nPremi qualsiasi tasto per uscire";
+    file.close();
     cin.ignore();
 	cin.get();
 	return EXIT_SUCCESS;

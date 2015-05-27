@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <string>
+#include <ctime>
 using namespace std;
 
 int main(){
@@ -46,13 +47,13 @@ int main(){
     	while (giocare != "si" && giocare != "no" && giocare != "Si" && giocare != "No")
     	
     	{
-            cout << "\nSi o no: ";
+            cerr << "\nInserire si o no: ";
             cin >> giocare;
             
             if (giocare == "o")
         
             {
-                cout << "\nAhah bella battuta! Ora inserisci 'si' oppure 'no' ";
+                cout << "\nAhah bella battuta! Ora inserisci \"si\" oppure \"no\" ";
                 cin >> giocare;
             }
             

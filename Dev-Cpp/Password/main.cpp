@@ -14,19 +14,19 @@ int main(){
     while (password != passwordvera)
     
     {
-        cout << "\nPassword errata, 2 tentativi rimanente: ";
+        cerr << "\nPassword errata, 2 tentativi rimanente: ";
         getline(cin, password);
         
         if (password != passwordvera)
         
         {
-            cout << "\nPassword errata, 1 tentativo rimanente: ";
+            cerr << "\nPassword errata, 1 tentativo rimanente: ";
             getline(cin, password);
             
             if (password != passwordvera)
             
             {
-                cout << "\nPassword errata, 0 tentativi rimanenti";
+                cerr << "\nPassword errata, 0 tentativi rimanenti";
                 goto fine;
             }
             

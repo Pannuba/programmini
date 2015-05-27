@@ -8,21 +8,31 @@ int main(){
 
     system("color a");
 	string operazione;
-	float a, c, risultato;
+	float primo, secondo, risultato;
 	cout << "PannubaCalc";
 	
 	for ( ;; )
 	
 	{
         cout << "\n\nInserisci il primo valore: ";
-        cin >> a;
+        cin >> primo;
+        
+		while (cin.fail() == true)
+		
+		{
+    	    cin.clear();
+    		cerr << "\nInserisci un numero: ";
+    		cin.ignore();
+    		cin >> primo;
+		}
+		
         cout << "\nL'operazione dev'essere una:\n\nsomma\nsottrazione\nmoltiplicazione\ndivisione\ncalcolo di una radice\nelevamento a potenza? ";
         cin >> operazione;
         
         while (operazione != "somma" && operazione != "+" && operazione != "sottrazione" && operazione != "-" && operazione != "moltiplicazione" && operazione != "x" && operazione != "divisione" && operazione != ":" && operazione != "potenza" && operazione != "elevamento" && operazione != "radice")
         
         {
-            cout << "\nInserisci un tipo di operazione: ";
+            cerr << "\nInserisci un tipo di operazione: ";
             cin >> operazione;
         }
         
@@ -30,8 +40,18 @@ int main(){
         
         {
             cout << "\nInserisci il secondo valore: ";
-            cin >> c;
-            risultato = a + c;
+            cin >> secondo;
+            
+            while (cin.fail() == true)
+		
+			{
+    	        cin.clear();
+    			cerr << "\nInserisci un numero: ";
+    			cin.ignore();
+    			cin >> secondo;
+			}
+		
+            risultato = primo + secondo;
             cout << "\nIl risultato e' " << risultato << "\n\n";
         }
         
@@ -39,8 +59,18 @@ int main(){
         
         {
             cout << "\nInserisci il secondo valore: ";
-            cin >> c;
-            risultato = a - c;
+            cin >> secondo;
+            
+			while (cin.fail() == true)
+		
+			{
+    	        cin.clear();
+    			cerr << "\nInserisci un numero: ";
+    			cin.ignore();
+    			cin >> secondo;
+			}
+		
+            risultato = primo - secondo;
             cout << "\nIl risultato e' " << risultato << "\n\n";
         }
         
@@ -48,8 +78,18 @@ int main(){
         
         {
             cout << "\nInserisci il secondo valore: ";
-            cin >> c;
-            risultato = a*c;
+            cin >> secondo;
+            
+			while (cin.fail() == true)
+		
+			{
+    	        cin.clear();
+    			cerr << "\nInserisci un numero: ";
+    			cin.ignore();
+    			cin >> secondo;
+			}
+		
+            risultato = primo*secondo;
             cout << "\nIl risultato e' " << risultato << "\n\n";
         }
         
@@ -57,16 +97,35 @@ int main(){
         
         {
             cout << "\nInserisci il secondo valore: ";
-            cin >> c;
+            cin >> secondo;
+                        
+			while (cin.fail() == true)
+		
+			{
+    	        cin.clear();
+    			cerr << "\nInserisci un numero: ";
+    			cin.ignore();
+    			cin >> secondo;
+			}
               
-            while (c == 0)
+            while (secondo == 0)
               
             {
-                cout << "\nInserisci un valore che non sia 0: ";
-                cin >> c;
+                cerr << "\nInserisci un valore che non sia 0: ";
+                cin >> secondo;
+                            
+				while (cin.fail() == true)
+		
+				{
+    	            cin.clear();
+    				cerr << "\nInserisci un numero: ";
+    				cin.ignore();
+    				cin >> secondo;
+				}
+			
             }
 	      
-            risultato = a / c;
+            risultato = primo / secondo;
             cout << "\nIl risultato e' " << risultato << "\n\n";
         }
         
@@ -74,14 +133,24 @@ int main(){
         
         {
             
-            while (a < 0)
+            while (primo < 0)
             
             {
-                cout << "\nLa radice quadrata di un numero negativo non esiste! Reinserire numero: ";
-                cin >> a;
+                cerr << "\nLa radice quadrata di un numero negativo non esiste! Reinserire numero: ";
+                cin >> primo;
+                            
+				while (cin.fail() == true)
+		
+				{
+    	            cin.clear();
+    				cerr << "\nInserisci un numero: ";
+    				cin.ignore();
+    				cin >> primo;
+				}
+			
             }
             
-            risultato = sqrt(a);
+            risultato = sqrt(primo);
             cout << "\nIl risultato e' " << risultato << "\n\n";
         }
         
@@ -89,9 +158,19 @@ int main(){
         
         {
             cout << "\nInserisci l'esponente: ";
-            cin >> c;
-            risultato = powf(a, c);
-            cout<<"\nIl risultato e' " << risultato << "\n\n";
+            cin >> secondo;
+            
+			while (cin.fail() == true)
+		
+			{
+    	        cin.clear();
+    			cerr << "\nInserisci un numero: ";
+    			cin.ignore();
+    			cin >> secondo;
+			}
+			
+            risultato = powf(primo, secondo);
+            cout << "\nIl risultato e' " << risultato << "\n\n";
         }
 	
     }		

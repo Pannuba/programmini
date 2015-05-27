@@ -18,6 +18,16 @@ int main(){
         somma = 0;
         cout << "Numero totale voti? ";
 		cin >> tot;
+		
+		while (cin.fail() == true)
+		
+		{
+    	    cin.clear();
+    		cerr << "\nInserisci un numero: ";
+    		cin.ignore();
+    		cin >> tot;
+		}
+		
 		cout << "\n";
 		
         for (i = 0; i < tot; i++)
@@ -26,11 +36,30 @@ int main(){
 	        cout << "Inserisci voto " << i + 1 << ": ";
 			cin >> voti[i];
 			
+			while (cin.fail() == true)
+		
+			{
+    	    	cin.clear();
+    			cerr << "\nInserisci un numero: ";
+    			cin.ignore();
+    			cin >> voti[i];
+			}
+			
 			while (voti[i] > 10 || voti[i] < 0)
 			
 			{
-			    cout << "Inserire un numero compreso tra 0 e 10: ";
+			    cerr << "Inserire un numero compreso tra 0 e 10: ";
 			    cin >> voti[i];
+			    
+				while (cin.fail() == true)
+		
+				{
+    	    	    cin.clear();
+    				cerr << "\nInserisci un numero: ";
+    				cin.ignore();
+    				cin >> voti[i];
+				}
+				
 			}
 			
 		}
@@ -72,6 +101,7 @@ int main(){
         
 	}
 	
+	cout << "\n\nPremere un qualsiasi tasto per uscire: ";
 	cin.ignore();
 	cin.get();
 	return EXIT_SUCCESS;

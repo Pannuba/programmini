@@ -1,29 +1,31 @@
 #include <iostream>
 #include <cstdlib>
 #include <string>
+#include <ctime>
 using namespace std;
 
 int main(){
 
     system("color a");
+    srand(time(0));
     string giocatore1, giocatore2, testacroce, giocare;
     int chilancia, lancio;
     cout << "Gioco di testa o croce";
     cout << "\n\nGiocatore 1, come ti chiami? ";
-    cin >> giocatore1;
+    getline(cin, giocatore1);
     cout << "\nGiocatore 2, come ti chiami? ";
-    cin >> giocatore2;
+    getline(cin, giocatore2);
     
     for ( ;; )
     
     {
-        cout << "\n\n\n\nLancia la moneta " << giocatore1 << " (1) o " << giocatore2 << " (2)? ";
+        cout << "\n\nLancia la moneta " << giocatore1 << " (1) o " << giocatore2 << " (2)? ";
         cin >> chilancia;
 
         while (chilancia != 1 && chilancia != 2)
     
         {
-            cout << "\nInserire 1 o 2: ";
+            cerr << "\nInserire 1 o 2: ";
             cin >> chilancia;
         }
 
@@ -32,6 +34,14 @@ int main(){
         {
             cout << "\n" << giocatore2 << ", testa o croce? ";
             cin >> testacroce;
+            
+			while (testacroce != "testa" && testacroce != "croce")
+            
+            {
+                cerr << "\nScrivi \"testa\" o \"croce\": ";
+                cin >> testacroce;
+            }
+            
             cout << "\n" << giocatore1 << " ha lanciato la moneta... ";
             lancio = rand() % 2 + 1;
         
@@ -120,7 +130,7 @@ int main(){
                     if (giocare == "si")
                     
                     {
-                                
+                        cout << "\n\n";
                     }
                     
                     else if (giocare == "no")
@@ -140,6 +150,14 @@ int main(){
         {
             cout << "\n" << giocatore1 << ", testa o croce? ";
             cin >> testacroce;
+            
+            while (testacroce != "testa" && testacroce != "croce")
+            
+            {
+                cerr << "\nScrivi \"testa\" o \"croce\": ";
+                cin >> testacroce;
+            }
+            
             cout << "\n" << giocatore2 << " ha lanciato la moneta... ";
             lancio = rand() % 2 + 1;
         
@@ -158,7 +176,7 @@ int main(){
                     if (giocare == "si")
                     
                     {
-                                
+                	    cout << "\n\n";
                     }
                     
                     else if (giocare == "no")
@@ -246,7 +264,7 @@ int main(){
     }
     
     cout << "\n\nPremere un qualsiasi tasto per uscire";    
-
-    cin.get();    
+	cin.ignore();
+    cin.get();
     return EXIT_SUCCESS;
 }

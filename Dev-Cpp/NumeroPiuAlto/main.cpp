@@ -19,36 +19,60 @@ int main(){
         
         cout << "\n\n" << giocatore1 << ", inserisci il primo numero: ";
         cin >> a;
-        system("CLS");
+        
+		while (cin.fail() == true)
+		
+		{
+    	    cin.clear();
+    		cerr << "\nInserisci un numero: ";
+    		cin.ignore();
+    		cin >> a;
+		}
+		
         cout << giocatore2 << ", inserisci il secondo numero: ";
         cin >> b;
-        system("CLS");
-    
-        if (a > b)
+        
+        while (cin.fail() == true)
+		
+		{
+    	    cin.clear();
+    		cerr << "\nInserisci un numero: ";
+    		cin.ignore();
+    		cin >> b;
+		}
+		
+		if (a > b)
     
         {
-            cout << "Ha vinto " << giocatore1 << "!!!\n\n";
+            cout << "\nHa vinto " << giocatore1 << "!!!\n\n";
         }
     
         if (a < b)
     
         {
-            cout << "Ha vinto " << giocatore2 << "!!!\n\n";
+            cout << "\nHa vinto " << giocatore2 << "!!!\n\n";
         }
     
         else if (a == b)
     
         {
-            cout << "Avete perso tutti e due balordi babbei (cit. Babu)\n\n";
+            cout << "\nAvete perso tutti e due!\n\n";
         }
         
         cout << "Volete giocare ancora? ";
         cin >> giocare;
         
+        while (giocare != "si" && giocare != "no")
+        
+        {
+        	cerr << "\nInserire \"si\" o \"no\" :";
+        	cin >> giocare;
+        }
+        
         if (giocare == "si")
         
         {
-        
+            cout << "\n\n";
         }
         
         if (giocare == "no")
@@ -59,6 +83,7 @@ int main(){
     
     }
     
+    cout << "\n\nPremere un qualsiasi tasto per uscire: ";
     cin.ignore();
     cin.get();    
     return EXIT_SUCCESS;

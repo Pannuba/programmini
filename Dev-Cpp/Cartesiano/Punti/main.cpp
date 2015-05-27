@@ -20,7 +20,7 @@ int main(){
         while (scelta != "1" && scelta != "3" && scelta != "2")
         
         {
-            cout << "\nInserisci un numero: ";
+            cerr << "\nInserisci un numero: ";
             cin >> scelta;
         }
         
@@ -29,12 +29,52 @@ int main(){
         {
             cout << "\n\nAx = ";
             cin >> ax;
-            cout << "\nAy = ";
+            
+            while (cin.fail() == true)
+		
+			{
+    	        cin.clear();
+    			cerr << "\nInserisci un numero: ";
+    			cin.ignore();
+    			cin >> ax;
+			}
+            
+			cout << "\nAy = ";
             cin >> ay;
+            
+            while (cin.fail() == true)
+		
+			{
+    	        cin.clear();
+    			cerr << "\nInserisci un numero: ";
+    			cin.ignore();
+    			cin >> ay;
+			}
+			
             cout << "\nBx = ";
             cin >> bx;
+    		
+			while (cin.fail() == true)
+		
+			{
+    	        cin.clear();
+    			cerr << "\nInserisci un numero: ";
+    			cin.ignore();
+    			cin >> bx;
+			}
+			
             cout << "\nBy = ";
             cin >> by;
+    		
+			while (cin.fail() == true)
+		
+			{
+    	        cin.clear();
+    			cerr << "\nInserisci un numero: ";
+    			cin.ignore();
+    			cin >> by;
+			}
+			
             distanza = sqrt((ax - bx) * (ax - bx)) + ((ay - by) * (ay - by));
             cout << "\n\ndistanza = " << distanza;
             mx = (ax + bx) / 2;
@@ -125,12 +165,52 @@ int main(){
         {
             cout << "\n\nAx = ";
             cin >> ax;
+                        
+            while (cin.fail() == true)
+		
+			{
+    	        cin.clear();
+    			cerr << "\nInserisci un numero: ";
+    			cin.ignore();
+    			cin >> ax;
+			}
+            
             cout << "\nAy = ";
             cin >> ay;
+                        
+            while (cin.fail() == true)
+		
+			{
+    	        cin.clear();
+    			cerr << "\nInserisci un numero: ";
+    			cin.ignore();
+    			cin >> ay;
+			}
+            
             cout << "\nMx = ";
             cin >> mx;
+                        
+            while (cin.fail() == true)
+		
+			{
+    	        cin.clear();
+    			cerr << "\nInserisci un numero: ";
+    			cin.ignore();
+    			cin >> mx;
+			}
+            
             cout << "\nMy = ";
             cin >> my;
+                        
+            while (cin.fail() == true)
+		
+			{
+    	        cin.clear();
+    			cerr << "\nInserisci un numero: ";
+    			cin.ignore();
+    			cin >> my;
+			}
+            
             bx = (2 * mx) - ax;
             by = (2 * my) - ay;
             cout << "\nM (" << bx << "; " << by << ")";
@@ -142,8 +222,27 @@ int main(){
         {
             cout << "\n\nAx = ";
             cin >> ax;
+			           
+            while (cin.fail() == true)
+		
+			{
+    	        cin.clear();
+    			cerr << "\nInserisci un numero: ";
+    			cin.ignore();
+    			cin >> ax;
+			}
+            
             cout << "\nAy = ";
             cin >> ay;
+                        
+            while (cin.fail() == true)
+		
+			{
+    	        cin.clear();
+    			cerr << "\nInserisci un numero: ";
+    			cin.ignore();
+    			cin >> ay;
+			}
             
             if (ax >= 0 && ay >= 0)
             
@@ -173,6 +272,7 @@ int main(){
         
     }
     
+    cout << "\n\nPremi un qualsiasi tasto per uscire: ";
     cin.ignore();
     cin.get();
     return EXIT_SUCCESS;

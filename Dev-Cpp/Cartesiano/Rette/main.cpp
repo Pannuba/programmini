@@ -7,7 +7,7 @@ using namespace std;
 int main(){
     
     system("color a");
-    int scelta, impoesp;
+    string scelta, impoesp;
     float xa, xb, ya, yb, distanza, m, m1, q, q1, a, a1, b, b1, c, c1, distpretta;
     cout << "PannProgrammaCheLavoraSuRetteNelPianoCartesiano";
     
@@ -17,33 +17,97 @@ int main(){
         cout << "\n\nSi lavora su una retta (1), due rette (2) o un punto e una retta (3)? ";
         cin >> scelta;
         
-        if (scelta == 1)
+        while (scelta != "1" && scelta != "2" && scelta != "3")
+        
+        {
+            cerr << "\nInserire 1, 2 o 3: ";
+            cin >> scelta;
+        }
+        
+        if (scelta == "1")
         
         {
             cout << "\nRetta ax + by + c = 0 (1) o y = mx + q (2)? ";
             cin >> impoesp;
             
-            if (impoesp == 1)
+            while (impoesp != "1" && impoesp != "2")
+            
+            {
+                cerr << "Inserire 1 o 2: ";
+                cin >> impoesp;
+            }
+            
+            if (impoesp == "1")
             
             {
                 cout << "\nInserire la rette di equazione ax + by + c = 0\n\na = ";
                 cin >> a;
+                            
+            	while (cin.fail() == true)
+		
+				{
+    	        	cin.clear();
+    			    cerr << "\nInserisci un numero: ";
+    				cin.ignore();
+    				cin >> a;
+				}
+            
                 cout << "\nb = ";
                 cin >> b;
+                
+                while (cin.fail() == true)
+		
+				{
+    	        	cin.clear();
+    				cerr << "\nInserisci un numero: ";
+    			    cin.ignore();
+    				cin >> b;
+				}
+            
                 cout << "\nc = ";
                 cin >> c;
+                            
+            	while (cin.fail() == true)
+		
+				{
+    	        	cin.clear();
+    				cerr << "\nInserisci un numero: ";
+    				cin.ignore();
+    				cin >> c;
+				}
+            
                 m = -(a / b);
                 q = -(c / b);
                 cout << "\nm = " << m << "    q = " << q;
             }
             
-            else if (impoesp == 2)
+            else if (impoesp == "2")
             
             {
                 cout << "\nm = ";
                 cin >> m;
+                            
+            	while (cin.fail() == true)
+		
+				{
+    	        	cin.clear();
+    				cerr << "\nInserisci un numero: ";
+    				cin.ignore();
+    				cin >> m;
+				}
+            
                 cout << "\nq = ";
                 cin >> q;
+                            
+            	while (cin.fail() == true)
+		
+				{
+    	        	cin.clear();
+    				cerr << "\nInserisci un numero: ";
+    				cin.ignore();
+    				cin >> q;
+				}
+            
                 
                 if (q > 0)
     
@@ -108,22 +172,82 @@ int main(){
             
         }
         
-        if (scelta == 2)
+        if (scelta == "2")
         
         {
             cout << "\nInserire le rette di equazione ax + by + c = 0";
             cout << "\nPrima retta\n\na = ";
             cin >> a;
+            
+            while (cin.fail() == true)
+		
+			{
+    	        cin.clear();
+    			cerr << "\nInserisci un numero: ";
+    			cin.ignore();
+    			cin >> a;
+			}
+            
             cout << "\nb = ";
             cin >> b;
+                        
+            while (cin.fail() == true)
+		
+			{
+    	        cin.clear();
+    			cerr << "\nInserisci un numero: ";
+    			cin.ignore();
+    			cin >> b;
+			}
+            
             cout << "\nc = ";
             cin >> c;
+                        
+            while (cin.fail() == true)
+		
+			{
+    	        cin.clear();
+    			cerr << "\nInserisci un numero: ";
+    			cin.ignore();
+    			cin >> c;
+			}
+            
             cout << "\n\nSeconda retta\n\na = ";
             cin >> a1;
+                        
+            while (cin.fail() == true)
+		
+			{
+    	        cin.clear();
+    			cerr << "\nInserisci un numero: ";
+    			cin.ignore();
+    			cin >> a1;
+			}
+            
             cout << "\nb = ";
             cin >> b1;
+                        
+            while (cin.fail() == true)
+		
+			{
+    	        cin.clear();
+    			cerr << "\nInserisci un numero: ";
+    			cin.ignore();
+    			cin >> b1;
+			}
+            
             cout << "\nc = ";
             cin >> c1;
+                        
+            while (cin.fail() == true)
+		
+			{
+    	        cin.clear();
+    			cerr << "\nInserisci un numero: ";
+    			cin.ignore();
+    			cin >> c1;
+			}
+            
             m = -(a / b);
             m1 = -(a1 / b1);
             cout << "\nm1 = " << m;
@@ -149,35 +273,105 @@ int main(){
             
         }
         
-        else if (scelta == 3)
+        else if (scelta == "3")
         
         {
             cout << "\n\nPunto:\n\n xa = ";
             cin >> xa;
+                        
+            while (cin.fail() == true)
+		
+			{
+    	        cin.clear();
+    			cerr << "\nInserisci un numero: ";
+    			cin.ignore();
+    			cin >> xa;
+			}
+            
             cout << "\nya = ";
-            cin >> ya;
+            cin >> ya;            
+            
+			while (cin.fail() == true)
+		
+			{
+    	        cin.clear();
+    			cerr << "\nInserisci un numero: ";
+    			cin.ignore();
+    			cin >> ya;
+			}
+            
             cout << "\nRetta: ax + by + c = 0 (1) o y = mx + q (2)? ";
             cin >> impoesp;
             
-            if (impoesp == 1)
+            if (impoesp == "1")
             
             {
                 cout << "\na = ";
                 cin >> a;
+                            
+            	while (cin.fail() == true)
+		
+				{
+    	        	cin.clear();
+    				cerr << "\nInserisci un numero: ";
+    				cin.ignore();
+    				cin >> a;
+				}
+            
                 cout << "\nb = ";
                 cin >> b;
+                            
+            	while (cin.fail() == true)
+		
+				{
+    	        	cin.clear();
+    				cerr << "\nInserisci un numero: ";
+    				cin.ignore();
+    				cin >> b;
+				}
+            
                 cout << "\n c = ";
                 cin >> c;
+                            
+            	while (cin.fail() == true)
+		
+				{
+    	        	cin.clear();
+    				cerr << "\nInserisci un numero: ";
+    				cin.ignore();
+    				cin >> c;
+				}
+            
                 distpretta = fabs(a*xa + b*ya + c) / sqrt(a*a + b*b);
             }
             
-            else if (impoesp == 2)
+            else if (impoesp == "2")
             
             {
                 cout << "\nm = ";
                 cin >> m;
+                            
+            	while (cin.fail() == true)
+		
+				{
+    	        	cin.clear();
+    				cerr << "\nInserisci un numero: ";
+    				cin.ignore();
+    				cin >> m;
+				}
+            
                 cout << "\nq = ";
                 cin >> q;
+                            
+            	while (cin.fail() == true)
+		
+				{
+    	        	cin.clear();
+    				cerr << "\nInserisci un numero: ";
+    				cin.ignore();
+    				cin >> q;
+				}
+            
                 distpretta = fabs(ya - m*xa -q) / sqrt(m*m + 1);
             }
             

@@ -17,6 +17,16 @@ int main(){
         somma = 0;
         cout << "\n\nNumero totale elementi? ";
 		cin >> tot;
+		
+		while (cin.fail() == true)
+		
+		{
+    	    cin.clear();
+    		cerr << "\nInserisci un numero: ";
+    		cin.ignore();
+    		cin >> tot;
+		}
+		
         float a = tot;
 		cout << "\n";
 		
@@ -25,6 +35,16 @@ int main(){
 		{
 	        cout << "Inserisci elemento " << i + 1 << ": ";
 			cin >> valori[i];
+			
+			while (cin.fail() == true)
+		
+			{
+    	    	cin.clear();
+    			cerr << "\nInserisci un numero: ";
+    			cin.ignore();
+    			cin >> valori[i];
+			}
+			
 		}
 
 		for (i = 0; i < tot; i++)                /* Devo rimettere i = 0 altrimenti usa l'i = n di prima */
@@ -66,6 +86,7 @@ int main(){
             
 	}
 	
+	cout << "\n\nPremere un qualsiasi tasto per uscire: ";
 	cin.ignore();
 	cin.get();
 	return EXIT_SUCCESS;
