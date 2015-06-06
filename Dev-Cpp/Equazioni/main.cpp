@@ -76,8 +76,8 @@ int main(){
         else if (delta > 0)
     
         {    
-            xuno = (-b - sqrt(delta)) / (2 * a);
-            xdue = (-b + sqrt(delta)) / (2 * a);
+            xuno = (-b - sqrtf(delta)) / (2 * a);
+            xdue = (-b + sqrtf(delta)) / (2 * a);
             cout << "\n\nx1 = " << xuno << "    x2 = " << xdue << "\n\nProdotto: " << xuno*xdue << "    Somma: " << xuno + xdue << "\n\n";
         }
     

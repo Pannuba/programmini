@@ -7,15 +7,13 @@ int main(){
 	
 	system("color a");
 	int tot, i = 0, j = 0, med1, med2;
-    float valori[i], somma, media, hold, mediana, cvar, scr, scarto, dev, deviazione;      // Se tolgo i = 0 va in crisi
+    float valori[i], somma, media, hold, mediana, cvar, scr, scarto, dev, deviazione, err;      // Se tolgo i = 0 va in crisi
     
     cout << "PannCoseSullaStatistica";
     
 	for ( ;; )
 	
 	{
-        somma = 0;
-        mediana = 0;
         cout << "\n\nNumero totale elementi? ";
 		cin >> tot;
 		
@@ -48,6 +46,8 @@ int main(){
 			
 		}
 
+        somma = 0;
+        
 		for (i = 0; i < tot; i++)                /* Devo rimettere i = 0 altrimenti usa l'i = n di prima */
 
 		{
@@ -77,21 +77,21 @@ int main(){
 	
         }
 	
-        /*cout << "\n\nIn ordine dal piu basso al piu alto sono:\n\n";
-
-        for (i = 0; i < tot; i++)
-	
-        { 												//  QUESTO NON SERVE!!!!!!!!1 
+		/*cout << "\n\nIn ordine dal piu basso al piu alto sono:\n\n";
+		for (i = 0; i < tot; i++)
+		{ 												//  QUESTO NON SERVE!!!!!!!!1 
 	        cout << valori[i] << endl;
         }*/
         //tot2 = tot / 2;
         
-        if (tot / 2 != static_cast <int> (tot / 2))			// se i valori totali sono dispari
+		mediana = 0;
+		
+        if (tot % 2 == true)			// se i valori totali sono dispari
         
 		{
-			med1 = (tot / 2 + 0.5) - 1;								//non va
+			med1 = tot / 2 + 0.5;
 		    mediana = valori[med1];
-		    cout << "\n\nMediana: " << mediana;
+		    cout << "    Mediana: " << mediana;
 		}
 		
 		else												//se pari
@@ -100,17 +100,17 @@ int main(){
 		    med1 = (tot / 2 + 1) - 1;
 		    med2 = (tot / 2) - 1;
 		    mediana = (valori[med1] + valori[med2]) / 2;
-		    cout << "\n\nMediana: " << mediana;
+		    cout << "    Mediana: " << mediana;
 		}
 		
         cvar = valori[tot - 1] - valori[0];
         cout << "\n\nCampo di variazione: " << cvar;
         scr = 0;
         
-        for (i = 0; i < tot; i++)
+		for (i = 0; i < tot; i++)
         
         {
-            scr = scr + (valori[i] - media);
+            scr = scr + abs(valori[i] - media);
         }
         
         scarto = scr / tot;
@@ -124,7 +124,10 @@ int main(){
         }
         
         deviazione = sqrt(dev / tot);
-        cout << "\n\nDeviazione standard: " << deviazione;
+        cout << "    Deviazione standard: " << deviazione;
+        err = 0;
+        err = deviazione / sqrtf(tot - 1);
+        cout << "\n\nErrore standard: " << err << "\n\n";
 	}
 	
 	cout << "\n\nPremere un qualsiasi tasto per uscire: ";

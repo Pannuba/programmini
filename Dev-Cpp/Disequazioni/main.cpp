@@ -137,7 +137,7 @@ int main(){
 
 		{
 			cout << "\n\nIl delta e' uguale a 0, quindi le due soluzioni coincidono\n\n";
-			xuno = (-b + sqrt(delta)) / (2 * a);
+			xuno = (-b + sqrtf(delta)) / (2 * a);
 			cout << "x1 = x2 = " << xuno;
 
 			if (segno == "1")
@@ -169,8 +169,8 @@ int main(){
 		else if (delta > 0)
 
 		{
-			xuno = (-b - sqrt(delta)) / (2 * a); /* xuno e' quello piccolo, xdue quello grande per una regola informale della matematica */
-			xdue = (-b + sqrt(delta)) / (2 * a);
+			xuno = (-b - sqrtf(delta)) / (2 * a); /* xuno e' quello piccolo, xdue quello grande per una regola informale della matematica */
+			xdue = (-b + sqrtf(delta)) / (2 * a);
 			cout << "\n\nx1 = " << xuno << "    x2 = " << xdue;
 
 			if (segno == "1")
