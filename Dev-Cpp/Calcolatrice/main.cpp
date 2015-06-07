@@ -2,6 +2,7 @@
 #include <iostream>
 #include <cmath>
 #include <string>
+#include <iomanip>
 using namespace std;
 
 int main(){
@@ -90,7 +91,7 @@ int main(){
 			}
 		
             risultato = primo*secondo;
-            cout << "\nIl risultato e' " << risultato << "\n\n";
+            cout << "\nIl risultato e' " << fixed << setprecision(2) << risultato << "\n\n";
         }
         
         if (operazione == "divisione" || operazione == ":")
@@ -126,7 +127,7 @@ int main(){
             }
 	      
             risultato = primo / secondo;
-            cout << "\nIl risultato e' " << risultato << "\n\n";
+            cout << "\nIl risultato e' " << fixed << setprecision(2) << risultato << "\n\n";
         }
         
         if (operazione == "radice")
@@ -150,8 +151,8 @@ int main(){
 			
             }
             
-            risultato = sqrt(primo);
-            cout << "\nIl risultato e' " << risultato << "\n\n";
+            risultato = sqrtf(primo);
+            cout << "\nIl risultato e' " << fixed << setprecision(2) << risultato << "\n\n";
         }
         
         if (operazione == "potenza" || operazione == "elevamento")
@@ -170,7 +171,7 @@ int main(){
 			}
 			
             risultato = powf(primo, secondo);
-            cout << "\nIl risultato e' " << risultato << "\n\n";
+            cout << "\nIl risultato e' " << fixed << setprecision(2) << risultato << "\n\n";
         }
 	
     }		
