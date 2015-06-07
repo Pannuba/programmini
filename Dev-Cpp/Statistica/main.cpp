@@ -83,8 +83,6 @@ int main(){
 	        cout << valori[i] << endl;
         }*/
         //tot2 = tot / 2;
-        
-		mediana = 0;
 		
         if (tot % 2 == true)			// se i valori totali sono dispari
         
@@ -103,7 +101,6 @@ int main(){
 		    cout << "    Mediana: " << mediana;
 		}
 		
-        cvar = valori[tot - 1] - valori[0];
         cout << "\n\nCampo di variazione: " << cvar;
         scr = 0;
         

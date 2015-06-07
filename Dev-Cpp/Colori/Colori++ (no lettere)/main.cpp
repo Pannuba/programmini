@@ -5,120 +5,109 @@ using namespace std;
 
 int main(){
 	
+	system("CLS");
 	srand(time(0));
 
 	for ( ;; )
 	
 	{
-		string num = "#";
 		int colore;
-		cout << num;
-		colore = rand() % 15;
+		colore = rand() % 16;
 		
 		if (colore == 0)
 		
 		{
-			system("color 1F");
-			//cout << " ";
-			cout << num;
+			system("color 10");
 		}
 		
 		if (colore == 1)
 		
 		{
-			system("color 2D");
-			cout << num;
+			system("color 21");
 		}
 		
 		if (colore == 2)
 		
 		{
-			system("color 37");
-			cout << num;
+			system("color 32");
 		}
 		
 		if (colore == 3)
 		
 		{
-			system("color 4B");
-			cout << num;
+			system("color 43");
 		}
 		
 		if (colore == 4)
 		
 		{
-			system("color 5A");
-			cout << num;
+			system("color 54");
 		}
 		
 		if (colore == 5)
 		
 		{
-			system("color 68");
-			cout << num;
+			system("color 65");
 		}
 				
 		if (colore == 6)
 		
 		{
-			system("color 7F");
-			cout << num;
+			system("color 76");
 		}
 	 		
 		if (colore == 7)
 		
 		{
-			system("color 80");
-			cout << num;
+			system("color 87");
 		}
 				
 		if (colore == 8)
 		
 		{
-			system("color 9E");
-			cout << num;
+			system("color 98");
 		}
 				
 		if (colore == 9)
 		
 		{
-			system("color AD");
-			cout << num;
+			system("color A9");
 		}
 				
 		if (colore == 10)
 		
 		{
-			system("color BC");
-			cout << num;
+			system("color BA");
 		}
 				
 		if (colore == 11)
 		
 		{
 			system("color CB");
-			cout << num;
 		}
 				
 		if (colore == 12)
 		
 		{
-			system("color D3");
-			cout << num;
+			system("color DC");
 		}
 				
 		if (colore == 13)
 		
 		{
-			system("color E9");
-			cout << num;
+			system("color ED");
 		}
 				
 		if (colore == 14)
 		
 		{
-			system("color F0");
-			cout << num;
+			system("color FE");
+		}
+		
+		if (colore == 15)
+		
+		{
+			system("color 0F");
 		}
 		
 	}
