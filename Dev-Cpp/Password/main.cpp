@@ -38,8 +38,7 @@ int main(){
     
     fine:
     
-    cout << "\n\nPremi un qualsiasi tasto per uscire: ";
-    cin.ignore();
-    cin.get();    
+    cout << "\n\nPremi Invio per uscire: ";
+    cin.ignore();   
     return EXIT_SUCCESS;
 }

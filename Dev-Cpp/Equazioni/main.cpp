@@ -55,8 +55,7 @@ int main(){
     		cin.ignore();
     		cin >> c;
 		}
-            
-    
+		
         delta = (b*b) - (4 * a*c); /* No pow(b, 2) ma b * b perche pow converte la variabile in double */
     
         if (delta < 0)
@@ -83,9 +82,8 @@ int main(){
     
     }
     
-    cout << "\n\nPremi un qualsiasi tasto per uscire: ";
+    cout << "\n\nPremi Invio per uscire: ";
     cin.ignore();
-	cin.get();
     return EXIT_SUCCESS;
     
 }

@@ -127,8 +127,7 @@ int main(){
         cout << "\n\nErrore standard: " << err << "\n\n";
 	}
 	
-	cout << "\n\nPremere un qualsiasi tasto per uscire: ";
+	cout << "\n\nPremi Invio per uscire: ";
 	cin.ignore();
-	cin.get();
 	return EXIT_SUCCESS;
 }

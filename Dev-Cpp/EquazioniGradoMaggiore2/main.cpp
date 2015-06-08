@@ -568,8 +568,7 @@ int main(){
 	
     } //fine di tutto il programma
 	
-    cout << "\n\nPremi un qualsiasi tasto per uscire: ";
+    cout << "\n\nPremi Invio per uscire: ";
     cin.ignore();
-	cin.get();
 	return EXIT_SUCCESS;
 }

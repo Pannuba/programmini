@@ -41,7 +41,7 @@ int main(){
         cout << "area: " << area;
     }
     
+    cout << "\n\nPremi Invio per uscire: ";
     cin.ignore();
-    cin.get();
     return EXIT_SUCCESS;
 }

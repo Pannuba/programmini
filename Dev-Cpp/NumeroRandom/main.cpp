@@ -72,5 +72,7 @@ int main(){
     	}
 	}
 	
+	cout << "\n\nPremi Invio per uscire: ";
+	cin.ignore();
 	return EXIT_SUCCESS;
 }

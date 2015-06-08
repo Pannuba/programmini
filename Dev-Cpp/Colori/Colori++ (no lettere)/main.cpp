@@ -112,7 +112,7 @@ int main(){
 		
 	}
 	
+	cout << "\n\nPremi Invio per uscire: ";
 	cin.ignore();
-	cin.get();
 	return EXIT_SUCCESS;
 }
