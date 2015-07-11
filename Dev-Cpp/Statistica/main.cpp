@@ -17,7 +17,7 @@ int main(){
         cout << "\n\nNumero totale elementi? ";
 		cin >> tot;
 		
-		while (cin.fail() == true)
+		while (cin.fail() == true || tot == 0)
 		
 		{
     	    cin.clear();

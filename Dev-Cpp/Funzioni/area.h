@@ -2,23 +2,23 @@
 #include <cstdlib>
 #include <cmath>
 
-float x, y, area;
+float area;
 
-float areaRettangolo(float, float)   // Differenza tra void senza return e float con return??
+float areaRettangolo(float x, float y)
 
 {
     area = x * y; // Come faccio a dire: area =  quel valore che ho messo * quell'altro valore che ho messo, anziche area = x * y
     return area;
 }
 
-float areaQuadrato(float)   
+float areaQuadrato(float x)
 
 {
     area = x * x;
     return area;
 }
 
-float areaCerchio(float)
+float areaCerchio(float x)
 
 {
     area = x*x * 3.14;

@@ -7,6 +7,7 @@ using namespace std;
 
 int main(){
     
+    float base, altezza, raggio, area;
     system("color a");
     string figura;
     cout << "che figura? ";
@@ -16,10 +17,10 @@ int main(){
     
     {
         cout << "lato1: ";
-        cin >> x;
+        cin >> base;
         cout << "lato2: ";
-        cin >> y;
-        areaRettangolo(x, y);
+        cin >> altezza;
+        area = areaRettangolo(base, altezza);
         cout << "area: " << area;
     }
     
@@ -27,8 +28,8 @@ int main(){
     
     {
         cout << "lato: ";
-        cin >> x;
-        areaQuadrato(x);
+        cin >> base;
+        area = areaQuadrato(base);
         cout << "area: " << area;
     }
     
@@ -36,12 +37,13 @@ int main(){
     
     {
         cout << "raggio: ";
-        cin >> x;
-        areaCerchio(x);
+        cin >> raggio;
+        area = areaCerchio(raggio);
         cout << "area: " << area;
     }
     
     cout << "\n\nPremi Invio per uscire: ";
     cin.ignore();
+    cin.get();
     return EXIT_SUCCESS;
 }
