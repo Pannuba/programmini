@@ -8,7 +8,7 @@ int main(){
     system("color a");   
     float a, b, c, delta, vx, vy;
     cout << "PannTrovaCoordinateVerticeParabole";
-    cout << "\n\n\n\nInserisci i valori a, b, c dell'equazione y = ax2 + bx + c:";
+    cout << "\n\nInserisci i valori a, b, c dell'equazione y = ax2 + bx + c:";
     
     for ( ;; )
     
@@ -88,7 +88,7 @@ int main(){
         if (c == 0)
         
         {
-            cout << "\n\n c e' uguale a 0, quindi la parabola passa per l'origine del piano";
+            cout << "\n\nc e' uguale a 0, quindi la parabola passa per l'origine del piano";
         }
         
         else if (b == 0 && c == 0)

@@ -59,10 +59,11 @@ int main(){
         delta = (b*b) - (4 * a*c); /* No pow(b, 2) ma b * b perche pow converte la variabile in double */
     
         if (delta < 0)
-    
-        {
-            cout << "\n\nIl delta e' minore di 0, quindi non esistono soluzioni all'equazione\n\n";
-        }
+		
+		{
+		    xuno = (-b - sqrtf(delta)) / (2 * a);
+            xdue = (-b + sqrtf(delta)) / (2 * a); cout << xuno; cout << endl<<xdue;
+		}
     
         if (delta == 0)
     

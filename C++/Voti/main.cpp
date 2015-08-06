@@ -7,7 +7,7 @@ using namespace std;
 int main(){
 	
 	system("color a");
-	unsigned long long int i = 0, votiok;
+	unsigned int i = 0, votiok;
     float tot, voti[i], somma, media;         // Se tolgo i = 0 va in crisi
     cout << "PannCalcolaMedie\n\n";
     
@@ -18,16 +18,6 @@ int main(){
         somma = 0;
         cout << "Numero totale voti? ";
 		cin >> tot;
-		
-		while (cin.fail() == true)
-		
-		{
-    	    cin.clear();
-    		cerr << "\nInserisci un numero: ";
-    		cin.ignore();
-    		cin >> tot;
-		}
-		
 		cout << "\n";
 		
         for (i = 0; i < tot; i++)
@@ -35,31 +25,13 @@ int main(){
 		{
 	        cout << "Inserisci voto " << i + 1 << ": ";
 			cin >> voti[i];
-			
-			while (cin.fail() == true)
-		
-			{
-    	    	cin.clear();
-    			cerr << "\nInserisci un numero: ";
-    			cin.ignore();
-    			cin >> voti[i];
-			}
+			malloc(sizeof(int));
 			
 			while (voti[i] > 10 || voti[i] < 0)
 			
 			{
 			    cerr << "Inserire un numero compreso tra 0 e 10: ";
 			    cin >> voti[i];
-			    
-				while (cin.fail() == true)
-		
-				{
-    	    	    cin.clear();
-    				cerr << "\nInserisci un numero: ";
-    				cin.ignore();
-    				cin >> voti[i];
-				}
-				
 			}
 			
 		}

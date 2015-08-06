@@ -8,18 +8,18 @@ struct Persona
  
 {
     int eta;
-    int altezzA;
+    int altezza;
 };
  
 int main(){
- 
+
+	system("color a");
 	cout << "num tot persone? ";
 	int tot;
 	string nome;
-	string fiee = "lel.txt";
-	ofstream file(fiee);
+	ofstream file("lel.txt");
 	cin >> tot;
-	file.open;
+	file.open("lel.txt");
 	
 	for (int i = 0; i < tot; i++)
 	
@@ -33,7 +33,7 @@ int main(){
 		cout << "\neta? ";
 		cin >> nome.eta; file << "\n\n" << nome.eta;
 		cout << "\n\naltessa? ";
-		cin>>nome.altezzA; file << "\n\n" << nome.altezzA;
+		cin>>nome.altezza; file << "\n\n" << nome.altezza;
 		cin.ignore();
 	}
 	
