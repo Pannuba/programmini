@@ -7,9 +7,9 @@ using namespace std;
 int main(){
 	
 	system("color a");
-	unsigned int i = 0, votiok;
+	unsigned int i = 0, votiok; //////togliere i = 0, mettere int nei cicli for
     float tot, voti[i], somma, media;         // Se tolgo i = 0 va in crisi
-    cout << "PannCalcolaMedie\n\n";
+    cout << "PannCalcolaMedie\n\n";  ////////float *voti; poi voti = (*float) malloc(tot*sizeof(float));
     
 	for ( ;; )
 	
@@ -25,7 +25,6 @@ int main(){
 		{
 	        cout << "Inserisci voto " << i + 1 << ": ";
 			cin >> voti[i];
-			malloc(sizeof(int));
 			
 			while (voti[i] > 10 || voti[i] < 0)
 			
