@@ -7,9 +7,9 @@ using namespace std;
 int main(){
 	
 	system("color a");
-	unsigned int i = 0, votiok; //////togliere i = 0, mettere int nei cicli for
-    float tot, voti[i], somma, media;         // Se tolgo i = 0 va in crisi
-    cout << "PannCalcolaMedie\n\n";  ////////float *voti; poi voti = (*float) malloc(tot*sizeof(float));
+	unsigned int votiok, tot;
+    float *voti, somma, media;
+    cout << "PannCalcolaMedie\n\n";
     
 	for ( ;; )
 	
@@ -18,9 +18,18 @@ int main(){
         somma = 0;
         cout << "Numero totale voti? ";
 		cin >> tot;
+		
+		while (tot % tot != 0)  // aiuto non va
+		
+		{
+			cout << "Inserisci un numero intero: ";
+			cin >> tot;
+		}
+		
+		voti = (float*) malloc(tot * sizeof(float));
 		cout << "\n";
 		
-        for (i = 0; i < tot; i++)
+        for (int i = 0; i < tot; i++)
 		
 		{
 	        cout << "Inserisci voto " << i + 1 << ": ";
@@ -29,13 +38,13 @@ int main(){
 			while (voti[i] > 10 || voti[i] < 0)
 			
 			{
-			    cerr << "Inserire un numero compreso tra 0 e 10: ";
+			    cerr << "Inserisci un numero compreso tra 0 e 10: ";
 			    cin >> voti[i];
 			}
 			
 		}
 
-		for (i = 0; i < tot; i++)                /* Devo rimettere i = 0 altrimenti usa l'i = n di prima */
+		for (int i = 0; i < tot; i++)                /* Devo rimettere i = 0 altrimenti usa l'i = n di prima */
 	
 		{
 		    somma = somma + voti[i];
@@ -44,7 +53,7 @@ int main(){
 		media = somma / tot;
 		cout << "\nMedia: " << media << "\n\n";
 		
-		for (i = 0; i < tot; i++)
+		for (int i = 0; i < tot; i++)
 		
 		{
             

@@ -17,15 +17,6 @@ int main(){
 	{
         cout << "\n\nInserisci il primo valore: ";
         cin >> primo;
-        
-		while (cin.fail() == true)
-		
-		{
-    	    cin.clear();
-    		cerr << "\nInserisci un numero: ";
-    		cin.ignore();
-    		cin >> primo;
-		}
 		
         cout << "\nL'operazione dev'essere una:\n\nsomma\nsottrazione\nmoltiplicazione\ndivisione\ncalcolo di una radice\nelevamento a potenza? ";
         cin >> operazione;
@@ -42,17 +33,7 @@ int main(){
         {
             cout << "\nInserisci il secondo valore: ";
             cin >> secondo;
-            
-            while (cin.fail() == true)
-		
-			{
-    	        cin.clear();
-    			cerr << "\nInserisci un numero: ";
-    			cin.ignore();
-    			cin >> secondo;
-			}
-		
-            risultato = primo + secondo;
+			risultato = primo + secondo;
             cout << "\nIl risultato e' " << risultato << "\n\n";
         }
         
@@ -61,16 +42,6 @@ int main(){
         {
             cout << "\nInserisci il secondo valore: ";
             cin >> secondo;
-            
-			while (cin.fail() == true)
-		
-			{
-    	        cin.clear();
-    			cerr << "\nInserisci un numero: ";
-    			cin.ignore();
-    			cin >> secondo;
-			}
-		
             risultato = primo - secondo;
             cout << "\nIl risultato e' " << risultato << "\n\n";
         }
@@ -80,18 +51,8 @@ int main(){
         {
             cout << "\nInserisci il secondo valore: ";
             cin >> secondo;
-            
-			while (cin.fail() == true)
-		
-			{
-    	        cin.clear();
-    			cerr << "\nInserisci un numero: ";
-    			cin.ignore();
-    			cin >> secondo;
-			}
-		
-            risultato = primo*secondo;
-            cout << "\nIl risultato e' " << fixed << setprecision(2) << risultato << "\n\n";
+            risultato = primo * secondo;
+            cout << "\nIl risultato e' " << risultato << "\n\n";
         }
         
         if (operazione == "divisione" || operazione == ":")
@@ -99,35 +60,16 @@ int main(){
         {
             cout << "\nInserisci il secondo valore: ";
             cin >> secondo;
-                        
-			while (cin.fail() == true)
-		
-			{
-    	        cin.clear();
-    			cerr << "\nInserisci un numero: ";
-    			cin.ignore();
-    			cin >> secondo;
-			}
-              
+            
             while (secondo == 0)
               
             {
                 cerr << "\nInserisci un valore che non sia 0: ";
                 cin >> secondo;
-                            
-				while (cin.fail() == true)
-		
-				{
-    	            cin.clear();
-    				cerr << "\nInserisci un numero: ";
-    				cin.ignore();
-    				cin >> secondo;
-				}
-			
             }
 	      
             risultato = primo / secondo;
-            cout << "\nIl risultato e' " << fixed << setprecision(2) << risultato << "\n\n";
+            cout << "\nIl risultato e' " << risultato << "\n\n";
         }
         
         if (operazione == "radice")
@@ -138,21 +80,11 @@ int main(){
             
             {
                 cerr << "\nLa radice quadrata di un numero negativo non esiste! Reinserire numero: ";
-                cin >> primo;
-                            
-				while (cin.fail() == true)
-		
-				{
-    	            cin.clear();
-    				cerr << "\nInserisci un numero: ";
-    				cin.ignore();
-    				cin >> primo;
-				}
-			
+                cin >> primo;	
             }
             
             risultato = sqrtf(primo);
-            cout << "\nIl risultato e' " << fixed << setprecision(2) << risultato << "\n\n";
+            cout << "\nIl risultato e' " << risultato << "\n\n";
         }
         
         if (operazione == "potenza" || operazione == "elevamento")
@@ -160,18 +92,8 @@ int main(){
         {
             cout << "\nInserisci l'esponente: ";
             cin >> secondo;
-            
-			while (cin.fail() == true)
-		
-			{
-    	        cin.clear();
-    			cerr << "\nInserisci un numero: ";
-    			cin.ignore();
-    			cin >> secondo;
-			}
-			
             risultato = powf(primo, secondo);
-            cout << "\nIl risultato e' " << fixed << setprecision(2) << risultato << "\n\n";
+            cout << "\nIl risultato e' " << risultato << "\n\n";
         }
 	
     }		

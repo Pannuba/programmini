@@ -6,7 +6,7 @@ using namespace std;
 int main(){
 	
 	system("color a");
-	srand(time(NULL));
+	srand((unsigned) time(0));
 
 	for ( ;; )
 	
