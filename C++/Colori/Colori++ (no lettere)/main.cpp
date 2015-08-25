@@ -6,7 +6,7 @@ using namespace std;
 int main(){
 	
 	system("cls");
-	srand(time(NULL));
+	srand((unsigned) time(NULL));
 
 	for ( ;; )
 	
@@ -67,5 +67,6 @@ int main(){
 	
 	cout << "\n\nPremi Invio per uscire: ";
 	cin.ignore();
+        cin.get();
 	return EXIT_SUCCESS;
 }
