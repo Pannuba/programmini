@@ -6,8 +6,8 @@ using namespace std;
 int main(){
 	
 	system("color a");
-	int tot, i = 0, j = 0, med1, med2;
-    float valori[i], somma, media, hold, mediana, cvar, scr, scarto, dev, deviazione, err;      // Se tolgo i = 0 va in crisi
+	unsigned int tot, med1, med2;
+    float *valori, somma, media, hold, mediana, cvar, scr, scarto, dev, deviazione, err;      // Se tolgo i = 0 va in crisi
     
     cout << "PannCoseSullaStatistica";
     
@@ -16,39 +16,19 @@ int main(){
 	{
         cout << "\n\nNumero totale elementi? ";
 		cin >> tot;
-		
-		while (cin.fail() == true || tot == 0)
-		
-		{
-    	    cin.clear();
-    		cerr << "\nInserisci un numero: ";
-    		cin.ignore();
-    		cin >> tot;
-		}
-		
-        float a = tot;
+        valori = (float*) malloc(tot * sizeof(float));
 		cout << "\n";
 		
-        for (i = 0; i < tot; i++)
+        for (int i = 0; i < tot; i++)
 		
 		{
 	        cout << "Inserisci elemento " << i + 1 << ": ";
 			cin >> valori[i];
-			
-			while (cin.fail() == true)
-		
-			{
-    	    	cin.clear();
-    			cerr << "\nInserisci un numero: ";
-    			cin.ignore();
-    			cin >> valori[i];
-			}
-			
 		}
 
         somma = 0;
         
-		for (i = 0; i < tot; i++)                /* Devo rimettere i = 0 altrimenti usa l'i = n di prima */
+		for (int i = 0; i < tot; i++)                /* Devo rimettere i = 0 altrimenti usa l'i = n di prima */
 
 		{
 		    somma = somma + valori[i];
@@ -57,11 +37,11 @@ int main(){
 		media = somma / tot;
 		cout << "\nMedia: " << media;
 		
-        for (i = 0; i < (tot - 1); i++)
+        for (int i = 0; i < (tot - 1); i++)
         
         {
 	        
-            for (j = 0; j < (tot - 1); j++)
+            for (int j = 0; j < (tot - 1); j++)
 	
             {
 	
@@ -104,7 +84,7 @@ int main(){
         cout << "\n\nCampo di variazione: " << cvar;
         scr = 0;
         
-		for (i = 0; i < tot; i++)
+		for (int i = 0; i < tot; i++)
         
         {
             scr = scr + abs(valori[i] - media);
@@ -114,7 +94,7 @@ int main(){
         cout << "\n\nScarto semplice medio: " << scarto;
         dev = 0;
         
-        for (i = 0; i < tot; i++)
+        for (int i = 0; i < tot; i++)
         
         {
             dev = dev + powf(valori[i] - media, 2);
@@ -129,5 +109,6 @@ int main(){
 	
 	cout << "\n\nPremi Invio per uscire: ";
 	cin.ignore();
+        cin.get();
 	return EXIT_SUCCESS;
 }
