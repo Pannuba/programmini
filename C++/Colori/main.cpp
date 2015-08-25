@@ -5,12 +5,12 @@ using namespace std;
 
 int main(){
 	
-	srand(time(0));
+	srand((unsigned) time(0));
 
 	for ( ;; )
 	
-	{
-		string num = "#";
+        {
+		char num = '#';
 		int colore;
 		cout << num;
 		colore = rand() % 15;
@@ -121,9 +121,10 @@ int main(){
 			cout << num;
 		}
 		
-	}
+        }
 	
 	cout << "\n\nPremi Invio per uscire: ";
 	cin.ignore();
+        cin.get();
 	return EXIT_SUCCESS;
 }
