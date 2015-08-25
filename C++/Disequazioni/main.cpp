@@ -1,13 +1,13 @@
 #include <cstdlib>
 #include <iostream>
 #include <cmath>
-#include <string>
-
+#include <conio.h>
 using namespace std;
+
 int main(){
     
-    system("color a");
-	string segno;
+        system("color a");
+        char segno;
 	float a, b, c, delta, xuno, xdue;
 	cout << "PannRisolutoreDiDisquazioniDiSecondoGrado";
 	cout << "\n\nInserisci i valori a, b, c dell'equazione ax2 + bx + c :";
@@ -15,62 +15,22 @@ int main(){
 	for ( ;; )
 	
 	{
-        cout << "\n\na = ";
-		cin >> a;
-		            
-        while (cin.fail() == true)
-		
-		{
-    	    cin.clear();
-    		cerr << "\nInserisci un numero: ";
-    		cin.ignore();
-    		cin >> a;
-		}
-            
+                cout << "\n\na = ";
+		cin >> a;        
 
 		while (a == 0)
 
 		{
 			cerr << "\nPer essere una disequazione di secondo grado, a non dev'essere uguale a 0\n\na = ";
 			cin >> a;
-			            
-            while (cin.fail() == true)
-		
-			{
-    	        cin.clear();
-    			cerr << "\nInserisci un numero: ";
-    			cin.ignore();
-    			cin >> a;
-			}
-            
 		}
 
 		cout << "\nb = ";
 		cin >> b;
-		            
-        while (cin.fail() == true)
-		
-		{
-    	    cin.clear();
-    		cerr << "\nInserisci un numero: ";
-    		cin.ignore();
-   			cin >> b;
-		}
-            
 		cout << "\nc = ";
 		cin >> c;
-		            
-        while (cin.fail() == true)
-		
-		{
-    	    cin.clear();
-    		cerr << "\nInserisci un numero: ";
-    		cin.ignore();
-    		cin >> c;
-		}
-            
 		cout << "\nMaggiore (1), minore (2), maggioreuguale (3) o minoreuguale (4) a 0? ";
-		cin >> segno;
+		cin >> segno; // usare _getch(); e char!
 
 		while (segno != "1" && segno != "2" && segno != "3" && segno != "4")
 
@@ -203,5 +163,6 @@ int main(){
 	
     cout << "\n\nPremi Invio per uscire: ";
     cin.ignore();
+    cin.get();
 	return EXIT_SUCCESS;
 }
