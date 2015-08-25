@@ -1,21 +1,24 @@
 #include <iostream>
 #include <cstdlib>
-#include <ctime>
 #include <fstream>
+#include <string>
 using namespace std;
  
-struct Persona
+class Persona
  
 {
-    int eta;
-    int altezza;
+    public:
+
+        string cognome;
+        unsigned int eta;
+        unsigned int altezza;
 };
  
 int main(){
 
 	system("color a");
-	cout << "num tot persone? ";
-	int tot;
+	cout << "PannCaratterizzazionePersone(?)\n\nNumero totale persone? "; // \n\n o \n\n\n\n
+	unsigned int tot;
 	string nome;
 	ofstream file("lel.txt");
 	cin >> tot;
@@ -25,20 +28,27 @@ int main(){
 	
 	{
 		
-		cout << "inserisci nome persona " << i + 1 << " : ";
+		cout << "Inserisci nome persona " << i + 1 << " : ";
 		cin.ignore();
 		getline (cin, nome);
-		file << nome;
-		Persona nome;
-		cout << "\neta? ";
-		cin >> nome.eta; file << "\n\n" << nome.eta;
-		cout << "\n\naltessa? ";
-		cin>>nome.altezza; file << "\n\n" << nome.altezza;
+                Persona nome;
+		file << "Nome: " << nome;
+		cout << "\nCognome? ";
+		getline(cin, nome.cognome);
+                file << "\n\nCognome: " << nome.cognome;
+		cout << "\nEtà? ";
+		cin >> nome.eta;
+                file << "\n\nEtà: " << nome.eta;
+		cout << "\n\nAltezza? ";
+		cin >> nome.altezza;
+                file << "\n\nAltezza:" << nome.altezza;
+                file << "\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";
 		cin.ignore();
 	}
 	
 	file.close();
 	cout << "\n\nPremi Invio per uscire: ";
 	cin.ignore();
+        cin.get();
 	return EXIT_SUCCESS;
 }
