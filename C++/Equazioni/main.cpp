@@ -1,5 +1,5 @@
-#include <cstdlib>
 #include <iostream>
+#include <cstdlib>
 #include <cmath>
 using namespace std;
 
@@ -15,16 +15,7 @@ int main(){
     {
         cout << "\n\na = ";  
         cin >> a;
-                    
-        while (cin.fail() == true)
-		
-		{
-    	    cin.clear();
-    		cerr << "\nInserisci un numero: ";
-    		cin.ignore();
-    		cin >> a;
-		}
-            
+
         while (a == 0)
         
         {
@@ -33,39 +24,19 @@ int main(){
         }
         
         cout << "\nb = ";
-        cin >> b;
-                    
-        while (cin.fail() == true)
-		
-		{
-    	    cin.clear();
-    		cerr << "\nInserisci un numero: ";
-    		cin.ignore();
-    		cin >> b;
-		}
-            
+        cin >> b;  
         cout << "\nc = ";
         cin >> c;
-                    
-        while (cin.fail() == true)
-		
-		{
-    	    cin.clear();
-    		cerr << "\nInserisci un numero: ";
-    		cin.ignore();
-    		cin >> c;
-		}
-		
         delta = (b*b) - (4 * a*c); /* No pow(b, 2) ma b * b perche pow converte la variabile in double */
     
         if (delta < 0)
 		
 		{
 		    xuno = (-b - sqrtf(delta)) / (2 * a);
-            xdue = (-b + sqrtf(delta)) / (2 * a); cout << xuno; cout << endl<<xdue;
+            xdue = (-b + sqrtf(delta)) / (2 * a); cout << xuno; cout << "\n" << xdue;
 		}
     
-        if (delta == 0)
+        else if (delta == 0) // fare cosi anche in altri? Poi aggiungere else --> errore
     
         {              
             cout << "\n\nIl delta e' uguale a 0, quindi le due soluzioni coincidono\n\n";
@@ -85,6 +56,7 @@ int main(){
     
     cout << "\n\nPremi Invio per uscire: ";
     cin.ignore();
+    cin.get();
     return EXIT_SUCCESS;
     
 }
