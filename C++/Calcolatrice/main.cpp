@@ -1,14 +1,14 @@
-#include <cstdlib>
 #include <iostream>
+#include <cstdlib>
 #include <cmath>
 #include <string>
-#include <iomanip>
+
 using namespace std;
 
 int main(){
 
     system("color a");
-	string operazione;
+	string operazione; // usare char
 	float primo, secondo, risultato;
 	cout << "PannubaCalc";
 	
