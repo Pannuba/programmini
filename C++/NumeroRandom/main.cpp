@@ -7,9 +7,9 @@ using namespace std;
 int main(){
 	
     system("color a");
-    srand(time(0));
+    srand((unsigned) time(0));
     string giocatore1, giocatore2, giocare;
-    float num1, num2;
+    unsigned int num1, num2;
     cout << "In questo gioco vince chi estrae il numero piu' alto\n\nGiocatore 1, come ti chiami? ";
     getline(cin, giocatore1);
     cout << "\nGiocatore 2, come ti chiami? ";
@@ -59,13 +59,7 @@ int main(){
             
         }
         
-    	if (giocare == "si" || giocare == "Si")
-        
-    	{
-            // lol spazio vuoto
-    	}
-        
-    	else if (giocare == "no" || giocare == "No")
+    	if (giocare == "no" || giocare == "No")
         
     	{
             break;
@@ -74,5 +68,6 @@ int main(){
 	
 	cout << "\n\nPremi Invio per uscire: ";
 	cin.ignore();
+        cin.get();
 	return EXIT_SUCCESS;
 }
