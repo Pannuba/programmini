@@ -1,5 +1,5 @@
-#include <cstdlib>
 #include <iostream>
+#include <cstdlib>
 #include <string>
 using namespace std;
 
@@ -7,7 +7,7 @@ int main(){
     
     system("color a");
     string giocatore1, giocatore2, giocare;    
-    float a, b;
+    unsigned int a, b;
     cout << "In questo gioco vince chi inserisce il numero piu alto\n\nGiocatore 1, come ti chiami? ";
     getline(cin, giocatore1);
     cout << "\nGiocatore 2, come ti chiami? ";
@@ -19,28 +19,9 @@ int main(){
         
         cout << "\n\n" << giocatore1 << ", inserisci il primo numero: ";
         cin >> a;
-        
-		while (cin.fail() == true)
-		
-		{
-    	    cin.clear();
-    		cerr << "\nInserisci un numero: ";
-    		cin.ignore();
-    		cin >> a;
-		}
-		
         cout << giocatore2 << ", inserisci il secondo numero: ";
         cin >> b;
-        
-        while (cin.fail() == true)
-		
-		{
-    	    cin.clear();
-    		cerr << "\nInserisci un numero: ";
-    		cin.ignore();
-    		cin >> b;
-		}
-		
+
 		if (a > b)
     
         {
@@ -85,5 +66,6 @@ int main(){
     
     cout << "\n\nPremi Invio per uscire: ";
     cin.ignore();
+    cin.get();
     return EXIT_SUCCESS;
 }
