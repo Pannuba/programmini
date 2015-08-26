@@ -1,6 +1,4 @@
-#include <iostream>
-#include <windows.h>
-using namespace std;
+#include <windows.h> // incl iostream?
 
 void music()
 
