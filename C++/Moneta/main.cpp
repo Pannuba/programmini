@@ -7,9 +7,9 @@ using namespace std;
 int main(){
 
     system("color a");
-    srand(time(0));
+    srand((unsigned)time(0));
     string giocatore1, giocatore2, testacroce, giocare;
-    int chilancia, lancio;
+    unsigned int chilancia, lancio;
     cout << "Gioco di testa o croce";
     cout << "\n\nGiocatore 1, come ti chiami? ";
     getline(cin, giocatore1);
@@ -265,5 +265,6 @@ int main(){
     
     cout << "\n\nPremi Invio per uscire";    
 	cin.ignore();
+        cin.get();
     return EXIT_SUCCESS;
 }
