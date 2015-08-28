@@ -1,34 +1,44 @@
 #include <iostream>
 #include <cstdlib>
 #include <string>
-#include <omino.h>
+#include <ctime>
+#include "omino.h"
 using namespace std;
-
-/*void creaparola()
-
-{
-	char lettere[]*/
 
 int main(){
 	
+	srand((unsigned)time(0));
 	system("color a");
 	cout << "PannImpiccato";
-	string giocare, parola = "correct horse battery staple";
+	string giocare, parole[4] = {"correct", "horse", "battery", "staple"};
 	bool gioca = true;
-	int vite;
+	unsigned int vite;
 	
 	while (gioca)
 	
 	{
-		//creaparola();
 		cout << "\n\nInserisci una lettera o indovina la parola! ";
 		vite = 10;
+		string parola = parole[rand() % 4];
+		string input;
 		
 		while (vite != 0)
 		
 		{
-			string input;
 			getline(cin, input);
+			
+			if (input.length() != 1)
+			
+			{
+			
+				for (int i = 0; i < parola.length(); i++)
+				
+				{
+					if (parola[i] == input)
+					
+					{
+						
+				
 			
 			if (input == parola)
 			
@@ -40,14 +50,14 @@ int main(){
 				
 				{
 					gioca = false;
-					break;
+				//break;
 				}
 				
-				else
+		//		else
 				
-				{
-					break;
-				}
+	//			{
+	//				break;
+	//			}
 				
 			}
 			

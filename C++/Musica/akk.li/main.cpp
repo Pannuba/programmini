@@ -8,7 +8,9 @@ int main(){
 	
 	system("mode 800");
 	frame1();
+	
 	while (true)
+	
 	{
 	    music();
 	}
