@@ -38,7 +38,7 @@ int main(){
 					
 					{
 						
-				
+				cout << "ej";}
 			
 			if (input == parola)
 			

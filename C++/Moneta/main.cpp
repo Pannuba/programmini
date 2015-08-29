@@ -265,6 +265,6 @@ int main(){
     
     cout << "\n\nPremi Invio per uscire";    
 	cin.ignore();
-        cin.get();
+    cin.get();
     return EXIT_SUCCESS;
 }

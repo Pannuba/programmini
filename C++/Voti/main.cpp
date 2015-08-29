@@ -7,7 +7,7 @@ using namespace std;
 int main(){
 	
 	system("color a");
-	unsigned int votiok, tot;
+	unsigned int i, votiok, tot;
     float *voti, somma, media;
     cout << "PannCalcolaMedie\n\n";
     
@@ -29,7 +29,7 @@ int main(){
 		voti = (float*) malloc(tot * sizeof(float));
 		cout << "\n";
 		
-        for (int i = 0; i < tot; i++)
+        for (i = 0; i < tot; i++)
 		
 		{
 	        cout << "Inserisci voto " << i + 1 << ": ";
@@ -44,7 +44,7 @@ int main(){
 			
 		}
 
-		for (int i = 0; i < tot; i++)                /* Devo rimettere i = 0 altrimenti usa l'i = n di prima */
+		for (i = 0; i < tot; i++)                /* Devo rimettere i = 0 altrimenti usa l'i = n di prima */
 	
 		{
 		    somma = somma + voti[i];
@@ -53,7 +53,7 @@ int main(){
 		media = somma / tot;
 		cout << "\nMedia: " << media << "\n\n";
 		
-		for (int i = 0; i < tot; i++)
+		for (i = 0; i < tot; i++)
 		
 		{
             
@@ -78,6 +78,8 @@ int main(){
             cout << "Voti sufficienti: " << votiok;
             cout << "\nVoti insufficienti: " << tot - votiok << "\n\n\n\n";
         }
+        
+        free(voti);
         
 	}
 	

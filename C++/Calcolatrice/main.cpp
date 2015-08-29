@@ -2,13 +2,12 @@
 #include <cstdlib>
 #include <cmath>
 #include <string>
-
 using namespace std;
 
 int main(){
 
-    system("color a");
-	string operazione; // usare char
+	system("color a");
+	string operazione;
 	float primo, secondo, risultato;
 	cout << "PannubaCalc";
 	

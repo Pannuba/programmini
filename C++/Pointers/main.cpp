@@ -3,11 +3,6 @@
 #include <cmath>
 using namespace std;
 
-int somma(int *latoa, int *latob)
-
-{
-    return latoa + latob; // o era *latoa + *latob?
-
 int main(){
 
     cout << "Test sui puntatori\n\n";
@@ -21,3 +16,4 @@ int main(){
     /* ... */
     return EXIT_SUCCESS;
 }
+

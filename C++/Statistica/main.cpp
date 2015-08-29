@@ -6,7 +6,7 @@ using namespace std;
 int main(){
 	
 	system("color a");
-	unsigned int tot, med1, med2;
+	unsigned int i, j, tot, med1, med2;
     float *valori, somma, media, hold, mediana, cvar, scr, scarto, dev, deviazione, err;      // Se tolgo i = 0 va in crisi
     
     cout << "PannCoseSullaStatistica";
@@ -19,7 +19,7 @@ int main(){
         valori = (float*) malloc(tot * sizeof(float));
 		cout << "\n";
 		
-        for (int i = 0; i < tot; i++)
+        for (i = 0; i < tot; i++)
 		
 		{
 	        cout << "Inserisci elemento " << i + 1 << ": ";
@@ -28,7 +28,7 @@ int main(){
 
         somma = 0;
         
-		for (int i = 0; i < tot; i++)                /* Devo rimettere i = 0 altrimenti usa l'i = n di prima */
+		for (i = 0; i < tot; i++)                /* Devo rimettere i = 0 altrimenti usa l'i = n di prima */
 
 		{
 		    somma = somma + valori[i];
@@ -37,11 +37,11 @@ int main(){
 		media = somma / tot;
 		cout << "\nMedia: " << media;
 		
-        for (int i = 0; i < (tot - 1); i++)
+        for (i = 0; i < (tot - 1); i++)
         
         {
 	        
-            for (int j = 0; j < (tot - 1); j++)
+            for (j = 0; j < (tot - 1); j++)
 	
             {
 	
@@ -56,7 +56,11 @@ int main(){
             }
 	
         }
-	
+		
+		cvar = 0;
+		cvar = valori[tot - 1] - valori[0];
+		cout << "\n\nCampo di variazione: " << cvar;
+		
 		/*cout << "\n\nIn ordine dal piu basso al piu alto sono:\n\n";
 		for (i = 0; i < tot; i++)
 		{ 												//  QUESTO NON SERVE!!!!!!!!1 
@@ -81,10 +85,10 @@ int main(){
 		    cout << "    Mediana: " << mediana;
 		}
 		
-        cout << "\n\nCampo di variazione: " << cvar;
+
         scr = 0;
         
-		for (int i = 0; i < tot; i++)
+		for (i = 0; i < tot; i++)
         
         {
             scr = scr + abs(valori[i] - media);
@@ -94,7 +98,7 @@ int main(){
         cout << "\n\nScarto semplice medio: " << scarto;
         dev = 0;
         
-        for (int i = 0; i < tot; i++)
+        for (i = 0; i < tot; i++)
         
         {
             dev = dev + powf(valori[i] - media, 2);
@@ -105,10 +109,11 @@ int main(){
         err = 0;
         err = deviazione / sqrtf(tot - 1);
         cout << "\n\nErrore standard: " << err << "\n\n";
+        free(valori);
 	}
 	
 	cout << "\n\nPremi Invio per uscire: ";
 	cin.ignore();
-        cin.get();
+    cin.get();
 	return EXIT_SUCCESS;
 }

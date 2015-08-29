@@ -20,7 +20,7 @@ int main(){
         cin >> base;
         cout << "lato2: ";
         cin >> altezza;
-        area = areaRettangolo(base, altezza);
+        area = areaRettangolo(base,altezza);
         cout << "area: " << area;
     }
     

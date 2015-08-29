@@ -8,47 +8,44 @@ class Persona
  
 {
     public:
-
-        string cognome;
-        unsigned int eta;
-        unsigned int altezza;
+    	string nome;
+    	string cognome;
+    	unsigned int eta;
+    	unsigned int altezza;
 };
  
 int main(){
-
+	
+	unsigned int tot;
+	ofstream file("lel.txt");
+	file.open("lel.txt");
 	system("color a");
 	cout << "PannCaratterizzazionePersone(?)\n\nNumero totale persone? "; // \n\n o \n\n\n\n
-	unsigned int tot;
-	string nome;
-	ofstream file("lel.txt");
 	cin >> tot;
-	file.open("lel.txt");
 	
 	for (int i = 0; i < tot; i++)
 	
 	{
-		
 		cout << "Inserisci nome persona " << i + 1 << " : ";
 		cin.ignore();
-		getline (cin, nome);
-                Persona nome;
-		file << "Nome: " << nome;
+		getline (cin, Persona.nome);
+		file << "Nome: " << lol.nome;
 		cout << "\nCognome? ";
-		getline(cin, nome.cognome);
-                file << "\n\nCognome: " << nome.cognome;
-		cout << "\nEtÃ ? ";
-		cin >> nome.eta;
-                file << "\n\nEtÃ : " << nome.eta;
+		getline(cin, lol.cognome);
+        file << "\n\nCognome: " << lol.cognome;
+		cout << "\nEtà ? ";
+		cin >> lol.eta;
+        file << "\n\nEtà : " << lol.eta;
 		cout << "\n\nAltezza? ";
-		cin >> nome.altezza;
-                file << "\n\nAltezza:" << nome.altezza;
-                file << "\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";
+		cin >> lol.altezza;
+        file << "\n\nAltezza:" << lol.altezza;
+        file << "\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";
 		cin.ignore();
 	}
 	
 	file.close();
 	cout << "\n\nPremi Invio per uscire: ";
 	cin.ignore();
-        cin.get();
+    cin.get();
 	return EXIT_SUCCESS;
 }
