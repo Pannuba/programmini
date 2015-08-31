@@ -6,13 +6,14 @@ using namespace std;
 int main(){
 	
 	system("color a");
+	system("mode 800");
     srand((unsigned) time(0));
+    const char caratteri[59] = "abcdefghijklmnopqrstuvwxyz0123456789,.-@#][_*^?\'=!\\<>\"|()+";
 	
 	for ( ;; )
 	
 	{
-	    char carr[59] = "abcdefghijklmnopqrstuvwxyz0123456789,.-@#][_*^?\'=!\\<>\"|()+";
-		cout <<	carr[rand() % 59];
+		cout <<	caratteri[rand() % 59];
 		
 		if ((rand() % 2) == 1)
 		
@@ -23,7 +24,7 @@ int main(){
 	}
 	
 	cout << "\n\nPremi Invio per uscire: ";
-	cin.ignore();
+	cin.sync();
 	cin.get();
 	return EXIT_SUCCESS;
 }

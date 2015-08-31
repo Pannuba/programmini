@@ -144,6 +144,6 @@ int main(){
 	
 	cout << "\n\nPremi invio per uscire: ";
 	cin.get();
-	cin.ignore();
+	cin.sync();
 	return EXIT_SUCCESS;
 }

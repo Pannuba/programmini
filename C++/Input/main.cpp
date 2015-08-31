@@ -41,7 +41,7 @@ int main(){
 
     cout << "\n\nPremi Invio per uscire: ";
     file.close();
-    cin.ignore();
+    cin.sync();
     cin.get();
 	return EXIT_SUCCESS;
 }

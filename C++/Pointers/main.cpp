@@ -8,7 +8,6 @@ int main(){
     cout << "Test sui puntatori\n\n";
     int latoa, latob;
     cin >> latoa; cin >> latob;
-    cout << somma(&latoa, &latob);
     int c; int *c = &c;
     cin *c; cout << *c << " " << c;
     int od;

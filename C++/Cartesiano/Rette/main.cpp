@@ -8,7 +8,7 @@ int main(){
     
     system("color a");
     string scelta, impoesp;
-    float xa, xb, ya, yb, distanza, m, m1, q, q1, a, a1, b, b1, c, c1, distpretta;
+    float xa, ya, m, m1, q, a, a1, b, b1, c, c1, distpretta;
     cout << "PannProgrammaCheLavoraSuRetteNelPianoCartesiano";
     
     for ( ;; )
@@ -193,6 +193,7 @@ int main(){
     }
     
     cout << "\n\nPremi Invio per uscire: ";
-    cin.ignore();
+    cin.sync();
+    cin.get();
     return EXIT_SUCCESS;
 }

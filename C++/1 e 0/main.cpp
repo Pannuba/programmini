@@ -7,40 +7,39 @@ int main(){
 	
 	system("color a");
 	srand((unsigned) time(0));
-
+	
 	for ( ;; )
 	
 	{
-		if ((rand() % 2) == 0)
+		switch (rand() % 2)
 		
 		{
-			cout << "1";
-			
-			if ((rand() % 2) == 1)
-			
-			{
-			    cout << " ";
-			}
-			
-		}
-		
-		else if ((rand() % 2) == 1)
-		
-		{
-			cout << "0";
-			
-			if ((rand() % 2) == 1)
-			
-			{
-			    cout << " ";
-			}
+			case 0:
+				
+				cout << "1";
+				
+				if ((rand() % 2) == 1)
+				
+				{
+					cout << " ";
+				}
+				
+			case 1:
+				
+				cout << "0";
+				
+				if ((rand() % 2) == 1)
+				
+				{
+					cout << " ";
+				}
 		
 		}
 		
 	}
 	
 	cout << "\n\nPremi Invio per uscire: ";
-	cin.ignore();
+	cin.sync();
 	cin.get();
 	return EXIT_SUCCESS;
 }

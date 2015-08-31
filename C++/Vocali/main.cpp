@@ -6,8 +6,8 @@ using namespace std;
 int main(){
 	
 	system("color a");
-	const char vowels[] = "aeiou";
-	unsigned int i, j, vocali;
+	const char vocali[] = "aeiou";
+	unsigned int i, j, numvocali;
 	string linea;
 	cout << "PannTrovaVocali";
 	
@@ -23,10 +23,10 @@ int main(){
 		    for (j = 0; j < 5; j++)
 			
 			{
-			    if (linea[i] == vowels[j])
+			    if (linea[i] == vocali[j])
 				
 				{
-					vocali++;
+					numvocali++;
 				}
 			
 			}
@@ -37,7 +37,7 @@ int main(){
 	}
 	
 	cout << "\n\nPremi Invio per uscire: ";
-	cin.ignore();
+	cin.sync();
 	cin.get();
 	return EXIT_SUCCESS;
 }

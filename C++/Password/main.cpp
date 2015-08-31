@@ -10,42 +10,36 @@ int main(){
     passwordvera = "uno due tre quattro";
     cout << "Inserisci password: ";
     getline(cin, password);
-
-/* 
-for (unsigned int i = 0; i < 3; i++){
-if(password==passwordvera) break;
-else {cout << "\nPassword errata, " << 3 - i << " tentativi rimanenti: ";
-getline(cin, password);}}
-*/    
-    while (password != passwordvera)
+	
+	for (unsigned int i = 0; i < 5; i++)
+	
+	{
+		
+		if (password == passwordvera)
     
-    {
-        cerr << "\nPassword errata, 2 tentativi rimanente: ";
-        getline(cin, password);
-        
-        if (password != passwordvera)
-        
-        {
-            cerr << "\nPassword errata, 1 tentativo rimanente: ";
-            getline(cin, password);
-            
-            if (password != passwordvera)
-            
-            {
-                cerr << "\nPassword errata, 0 tentativi rimanenti";
-                goto fine;
-            }
-            
-        }
-            
-    }
-    
-    cout << "\n\nPassword corretta!";
-    
-    fine:
+		{
+			cout << "\n\nPassword corretta!";
+			break;
+		}
+		
+		else if (i == 4)
+		
+		{
+			cout << "\nNon hai piu' tentativi :(";
+			break;
+		}
+		
+		else
+		
+		{
+			cout << "\nPassword errata, " << 3 - i << " tentativi rimanenti: ";
+			getline(cin, password);
+		}
+	
+	}
     
     cout << "\n\nPremi Invio per uscire: ";
-    cin.ignore();
+    cin.sync();
     cin.get();
     return EXIT_SUCCESS;
 }

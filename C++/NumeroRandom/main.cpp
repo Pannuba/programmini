@@ -67,7 +67,7 @@ int main(){
 	}
 	
 	cout << "\n\nPremi Invio per uscire: ";
-	cin.ignore();
-        cin.get();
+	cin.sync();
+    cin.get();
 	return EXIT_SUCCESS;
 }

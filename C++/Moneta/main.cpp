@@ -9,7 +9,7 @@ int main(){
     system("color a");
     srand((unsigned)time(0));
     string giocatore1, giocatore2, testacroce, giocare;
-    unsigned int chilancia, lancio;
+    unsigned int chilancia;
     cout << "Gioco di testa o croce";
     cout << "\n\nGiocatore 1, come ti chiami? ";
     getline(cin, giocatore1);
@@ -43,9 +43,8 @@ int main(){
             }
             
             cout << "\n" << giocatore1 << " ha lanciato la moneta... ";
-            lancio = rand() % 2 + 1;
-        
-            if (lancio == 1)
+            
+            if (rand() % 2 == 0)
         
             {
                 cout << "Testa!";
@@ -56,14 +55,8 @@ int main(){
                     cout << "\n\nHa vinto " << giocatore2 << "!";
                     cout << "\n\nVuoi giocare ancora? ";
                     cin >> giocare;
-                    
-                    if (giocare == "si")
-                    
-                    {
-                        cout << "\n\n\n";
-                    }
-                    
-                    else if (giocare == "no")
+					
+					if (giocare == "no")
                     
                     {
                         break;
@@ -78,13 +71,7 @@ int main(){
                     cout << "\n\nVuoi giocare ancora? ";
                     cin >> giocare;
                     
-                    if (giocare == "si")
-                    
-                    {
-                                
-                    }
-                    
-                    else if (giocare == "no")
+                    if (giocare == "no")
                     
                     {
                         break;
@@ -93,8 +80,8 @@ int main(){
                 }
                 
             }
-        
-            else if (lancio == 2)
+   
+            else if (rand() % 2 == 1)
             
             {
                 cout << "Croce!";
@@ -105,14 +92,8 @@ int main(){
                     cout << "\n\nNon Ha vinto " << giocatore2 << "!";
                     cout << "\n\nVuoi giocare ancora? ";
                     cin >> giocare;
-                    
-                    if (giocare == "si")
-                    
-                    {
-                                
-                    }
-                    
-                    else if (giocare == "no")
+					
+					if (giocare == "no")
                     
                     {
                         break;
@@ -159,9 +140,8 @@ int main(){
             }
             
             cout << "\n" << giocatore2 << " ha lanciato la moneta... ";
-            lancio = rand() % 2 + 1;
-        
-            if (lancio == 1)
+            
+            if (rand() % 2 == 0)
         
             {
                 cout << "Testa!";
@@ -172,14 +152,8 @@ int main(){
                     cout << "\n\nHa vinto " << giocatore1 << "!";
                     cout << "\n\nVuoi giocare ancora? ";
                     cin >> giocare;
-                    
-                    if (giocare == "si")
-                    
-                    {
-                	    cout << "\n\n";
-                    }
-                    
-                    else if (giocare == "no")
+					
+					if (giocare == "no")
                     
                     {
                         break;
@@ -193,14 +167,8 @@ int main(){
                     cout << "\n\nNon ha vinto " << giocatore2 << "!";
                     cout << "\n\nVuoi giocare ancora? ";
                     cin >> giocare;
-                    
-                    if (giocare == "si")
-                    
-                    {
-                                
-                    }
-                    
-                    else if (giocare == "no")
+					
+					if (giocare == "no")
                     
                     {
                         break;
@@ -209,8 +177,8 @@ int main(){
                 }
                 
             }
-        
-            else if (lancio == 2)
+            
+            else if (rand() % 2 == 1)
             
             {
                 cout << "Croce!";
@@ -222,13 +190,7 @@ int main(){
                     cout << "\n\nVuoi giocare ancora? ";
                     cin >> giocare;
                     
-                    if (giocare == "si")
-                    
-                    {
-                                 
-                    }
-                    
-                    else if (giocare == "no")
+                    if (giocare == "no")
                     
                     {
                         break;
@@ -243,13 +205,7 @@ int main(){
                     cout << "\n\nVuoi giocare ancora? ";
                     cin >> giocare;
                     
-                    if (giocare == "si")
-                    
-                    {
-                                
-                    }
-                    
-                    else if (giocare == "no")
+                    if (giocare == "no")
                     
                     {
                         break;

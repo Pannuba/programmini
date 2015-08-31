@@ -1,5 +1,5 @@
-#include <cstdlib>
 #include <iostream>
+#include <cstdlib>
 #include <cmath>
 #include <string>
 #include "area.h"
@@ -43,7 +43,7 @@ int main(){
     }
     
     cout << "\n\nPremi Invio per uscire: ";
-    cin.ignore();
+    cin.sync();
     cin.get();
     return EXIT_SUCCESS;
 }

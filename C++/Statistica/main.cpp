@@ -7,7 +7,7 @@ int main(){
 	
 	system("color a");
 	unsigned int i, j, tot, med1, med2;
-    float *valori, somma, media, hold, mediana, cvar, scr, scarto, dev, deviazione, err;      // Se tolgo i = 0 va in crisi
+    float *valori, somma, media, hold, mediana, cvar, scr, scarto, dev, deviazione, err;
     
     cout << "PannCoseSullaStatistica";
     
@@ -61,13 +61,6 @@ int main(){
 		cvar = valori[tot - 1] - valori[0];
 		cout << "\n\nCampo di variazione: " << cvar;
 		
-		/*cout << "\n\nIn ordine dal piu basso al piu alto sono:\n\n";
-		for (i = 0; i < tot; i++)
-		{ 												//  QUESTO NON SERVE!!!!!!!!1 
-	        cout << valori[i] << endl;
-        }*/
-        //tot2 = tot / 2;
-		
         if (tot % 2 == true)			// se i valori totali sono dispari
         
 		{
@@ -113,7 +106,7 @@ int main(){
 	}
 	
 	cout << "\n\nPremi Invio per uscire: ";
-	cin.ignore();
+	cin.sync();
     cin.get();
 	return EXIT_SUCCESS;
 }

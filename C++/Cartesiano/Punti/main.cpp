@@ -8,8 +8,7 @@ using namespace std;
 int main(){
     
     system("color a");
-    string scelta;
-    float ax, bx, ay, by, distanza, mx, my, m, m1, q, q1, fasciox, fascioy;
+    float ax, bx, ay, by, distanza, mx, my, m, q;
     cout << "PannProgrammaCheLavoraSuPuntiNelPianoCartesiano";
     
     for ( ;; )
@@ -199,7 +198,7 @@ int main(){
     }
     
     cout << "\n\nPremi Invio per uscire: ";
-    cin.ignore();
+    cin.sync();
     cin.get();
     return EXIT_SUCCESS;
 }
