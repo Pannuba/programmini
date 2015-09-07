@@ -5,6 +5,7 @@ using namespace std;
 
 int main(){
 	
+	system("mode 800");
 	system("color a");
 	srand((unsigned) time(0));
 	

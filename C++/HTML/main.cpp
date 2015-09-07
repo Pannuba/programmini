@@ -63,7 +63,7 @@ int main(){
 			for (unsigned int i = 0; i < 8; i++)
 			
 			{
-				html.erase(remove(html.begin(), html.end(), chars[i]), html.end());
+				html.erase(remove(html.begin(), html.begin(), chars[i]), html.end());
 			}
 			
 			file << "\n\t\t<p> " << html << " </p>";
