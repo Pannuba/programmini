@@ -3,6 +3,54 @@
 #include <cmath>
 using namespace std;
 
+/* Patetico tentativo a algoritmo per trovare moda - non funziona */
+float getModa(float *valori, unsigned int tot)
+
+{
+	float moda = 0;
+	unsigned int count, countarr[256], i = 0; /* Avrei messo countarr[tot] ma mi da un warning xdxdxd!!!1 */
+	
+	while (i < tot)
+	
+	{
+		si:
+		
+		if (valori[i] == valori[i + 1])   /* 1, 2, 3, 3 */
+		
+		{ 
+			count++;  /* Non si salva il valore in countarr secondo l'esempio (3, 3 finali) */
+			i++;
+			goto si;
+		}
+		
+		else if (valori[i] != valori[i + 1])
+		
+		{
+			count = countarr[i];    /* Countarr contiene quante volte appare ogni valore */
+			count = 1;
+			i++;
+		}
+	
+	}
+	
+	for (i=0;i<tot;i++)
+		cout << "\n" << countarr[i];
+	
+	/* Trovare il valore piu' grande di countArr, cercare di capire come associare un elemento di countArr a valori[] */
+	
+	/*unsigned int magg = 0;
+	
+	for (i = 0; i < tot; i++)
+	
+	{
+	if(countarr[i] > magg)
+	magg = countarr[i];
+	}
+	cout << magg;*/
+	
+	return moda;
+}
+
 int main(){
 	
 	system("color a");
@@ -14,30 +62,36 @@ int main(){
 	for ( ;; )
 	
 	{
-        cout << "\n\nNumero totale elementi? ";
-		cin >> tot;
-        valori = (float*) malloc(tot * sizeof(float));
+		tot = 0;
+		valori = (float*) malloc(sizeof(float)); // Inserisco 1 unità nel vettore
 		cout << "\n";
 		
-        for (i = 0; i < tot; i++)
+		while (true)
 		
 		{
-	        cout << "Inserisci elemento " << i + 1 << ": ";
-			cin >> valori[i];
+			cout << "\nInserisci valore " << tot + 1 << ": ";
+			
+			if(!(cin >> valori[tot]))   /* Se l'input non è un numero */
+			
+			{
+				cin.clear();
+				cin.sync();
+				break;
+			}
+			
+			tot++;
+			valori = (float*) realloc(valori, (tot + 1) * sizeof(float)); /* Non so perchè ma senza il + 1 non va */
 		}
 
         somma = 0;
         
 		for (i = 0; i < tot; i++)                /* Devo rimettere i = 0 altrimenti usa l'i = n di prima */
-
-		{
-		    somma = somma + valori[i];
-		}
+		    somma += valori[i];
 	
 		media = somma / tot;
 		cout << "\nMedia: " << media;
 		
-        for (i = 0; i < (tot - 1); i++)
+        for (i = 0; i < (tot - 1); i++)			/* Bubble-Sorting algorithm */
         
         {
 	        
@@ -61,7 +115,7 @@ int main(){
 		cvar = valori[tot - 1] - valori[0];
 		cout << "\n\nCampo di variazione: " << cvar;
 		
-        if (tot % 2 == true)			// se i valori totali sono dispari
+        if (tot % 2 == true)							/* Se i valori totali sono dispari */
         
 		{
 			med1 = tot / 2 + 0.5;
@@ -69,7 +123,7 @@ int main(){
 		    cout << "    Mediana: " << mediana;
 		}
 		
-		else												//se pari
+		else											/* Se pari */
 		
 		{
 		    med1 = (tot / 2 + 1) - 1;
@@ -82,20 +136,14 @@ int main(){
         scr = 0;
         
 		for (i = 0; i < tot; i++)
-        
-        {
-            scr = scr + abs(valori[i] - media);
-        }
+            scr += abs(valori[i] - media);
         
         scarto = scr / tot;
         cout << "\n\nScarto semplice medio: " << scarto;
         dev = 0;
         
         for (i = 0; i < tot; i++)
-        
-        {
-            dev = dev + powf(valori[i] - media, 2);
-        }
+            dev += powf(valori[i] - media, 2);
         
         deviazione = sqrt(dev / tot);
         cout << "    Deviazione standard: " << deviazione;
