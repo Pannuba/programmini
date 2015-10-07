@@ -1,3 +1,5 @@
+/* Ho scritto sta cagata nelle mie prime settimane di C++. E' un casino tremendo ma preferisco lasciarlo così per ricordarmi dei "bei" vecchi tempi" */
+
 #include <cstdlib>
 #include <iostream>
 #include <cmath>

@@ -7,7 +7,7 @@ int main(){
 	
 	system("mode 800");
 	system("cls");
-	srand((unsigned) time(NULL));
+	srand((unsigned) time(0));
 
 	for ( ;; )
 	
@@ -67,7 +67,7 @@ int main(){
 	}
 	
 	cout << "\n\nPremi Invio per uscire: ";
-	cin.ignore();
+	cin.sync();
     cin.get();
 	return EXIT_SUCCESS;
 }

@@ -5,13 +5,14 @@ using namespace std;
 
 int main(){
 	
+	system("mode 800");
 	srand((unsigned) time(0));
 
 	for ( ;; )
 	
 	{
-		char num = '#';
-		int colore;
+		const char num = '#';
+		unsigned int colore;
 		cout << num;
 		colore = rand() % 15;
 		
@@ -125,6 +126,6 @@ int main(){
 	
 	cout << "\n\nPremi Invio per uscire: ";
 	cin.ignore();
-        cin.get();
+	cin.get();
 	return EXIT_SUCCESS;
 }

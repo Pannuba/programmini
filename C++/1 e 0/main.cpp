@@ -16,27 +16,14 @@ int main(){
 		
 		{
 			case 0:
-				
 				cout << "1";
 				
-				if ((rand() % 2) == 1)
-				
-				{
-					cout << " ";
-				}
-				
 			case 1:
-				
 				cout << "0";
-				
-				if ((rand() % 2) == 1)
-				
-				{
-					cout << " ";
-				}
-		
 		}
 		
+		if ((rand() % 2) == 1)
+			cout << " ";
 	}
 	
 	cout << "\n\nPremi Invio per uscire: ";

@@ -1,5 +1,5 @@
 /*
-I don't really care about cross-platform compatibility... *yet*
+I don't really care about cross-platform compatibility... *yet* and btw the following doesnt 100% work
 
 #if _WIN32 || _WIN64
 	#include <cstdlib>

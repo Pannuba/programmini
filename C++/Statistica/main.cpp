@@ -8,7 +8,7 @@ float getModa(float *valori, unsigned int tot)
 
 {
 	float moda = 0;
-	unsigned int count, countarr[256], i = 0; /* Avrei messo countarr[tot] ma mi da un warning xdxdxd!!!1 */
+	unsigned int count, *countarr = (unsigned int*) malloc(tot * sizeof(unsigned int)), i = 0; //countarr[256], /* Avrei messo countarr[tot] ma mi da un warning xdxdxd!!!1 */
 	
 	while (i < tot)
 	
@@ -33,7 +33,7 @@ float getModa(float *valori, unsigned int tot)
 	
 	}
 	
-	for (i=0;i<tot;i++)
+	for (i = 0; i < tot; i++)
 		cout << "\n" << countarr[i];
 	
 	/* Trovare il valore piu' grande di countArr, cercare di capire come associare un elemento di countArr a valori[] */
@@ -62,14 +62,14 @@ int main(){
 	for ( ;; )
 	
 	{
-		tot = 0;
+		tot = 1;
 		valori = (float*) malloc(sizeof(float)); // Inserisco 1 unità nel vettore
 		cout << "\n";
 		
 		while (true)
 		
 		{
-			cout << "\nInserisci valore " << tot + 1 << ": ";
+			cout << "\nInserisci valore " << tot << ": ";
 			
 			if(!(cin >> valori[tot]))   /* Se l'input non è un numero */
 			
@@ -79,8 +79,8 @@ int main(){
 				break;
 			}
 			
-			tot++;
-			valori = (float*) realloc(valori, (tot + 1) * sizeof(float)); /* Non so perchè ma senza il + 1 non va */
+			tot+=2;
+			valori = (float*) realloc(valori, (tot) * sizeof(float)); /* Non so perchè ma senza il + 1 non va */
 		}
 
         somma = 0;
