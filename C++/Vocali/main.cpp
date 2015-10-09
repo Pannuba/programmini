@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cstdlib>
-#include <string>
 using namespace std;
 
 int main(){
@@ -14,26 +13,23 @@ int main(){
 	for ( ;; )
 	
 	{
-	    cout << "\n\nScrivi una frase o parola: ";
+		cout << "\n\nScrivi una frase o parola: ";
 		getline (cin, linea);
 		
 		for (i = 0; i < linea.length(); i++)
 		
 		{
-		    for (j = 0; j < 5; j++)
+			for (j = 0; j < 5; j++)
 			
 			{
-			    if (linea[i] == vocali[j])
-				
-				{
+				if (linea[i] == vocali[j])
 					numvocali++;
-				}
 			
 			}
 			
 		}
-	
-		cout << "\n\nvocali tot: " << vocali << "\n\n";
+		
+		cout << "\n\nvocali tot: " << numvocali << "\n\n";
 	}
 	
 	cout << "\n\nPremi Invio per uscire: ";
@@ -41,4 +37,3 @@ int main(){
 	cin.get();
 	return EXIT_SUCCESS;
 }
-

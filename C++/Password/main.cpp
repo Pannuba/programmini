@@ -1,22 +1,22 @@
 #include <iostream>
 #include <cstdlib>
-#include <string>
 using namespace std;
 
 int main(){
-    
-    system("color a");
-    string passwordvera, password; // const string?
-    passwordvera = "uno due tre quattro";
-    cout << "Inserisci password: ";
-    getline(cin, password);
+
+	system("color a");
+	const string passwordvera = "uno due tre quattro";
+	string password;
+	unsigned int i;
+	cout << "Inserisci password: ";
+	getline(cin, password);
 	
-	for (unsigned int i = 0; i < 5; i++)
+	for (i = 0; i < 5; i++)
 	
 	{
 		
 		if (password == passwordvera)
-    
+		
 		{
 			cout << "\n\nPassword corretta!";
 			break;
@@ -37,9 +37,9 @@ int main(){
 		}
 	
 	}
-    
-    cout << "\n\nPremi Invio per uscire: ";
-    cin.sync();
-    cin.get();
-    return EXIT_SUCCESS;
+	
+	cout << "\n\nPremi Invio per uscire: ";
+	cin.sync();
+	cin.get();
+	return EXIT_SUCCESS;
 }

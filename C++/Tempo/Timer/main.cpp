@@ -15,7 +15,6 @@ I don't really care about cross-platform compatibility... *yet* and btw the foll
 
 #include <iostream>
 #include <cstdlib>
-#include <string>
 #include <chrono>
 #include <thread>
 using namespace std;
