@@ -26,7 +26,7 @@ int main(){
 		cin >> b;
 		cout << "\nc = ";
 		cin >> c;
-		delta = (b*b) - (4 * a*c); /* No pow(b, 2) ma b * b perche pow converte la variabile in double */
+		delta = (b*b) - (4 * a*c);	/* No pow(b, 2) ma b * b perche pow converte la variabile in double */
 		vx = -b / (2 * a);
 		vy = -delta / (4 * a);
 		

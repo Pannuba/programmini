@@ -7,8 +7,8 @@ int main(){
 	
 	system("color a");
 	system("mode 800");
-    srand((unsigned) time(0));
-    const char caratteri[59] = "abcdefghijklmnopqrstuvwxyz0123456789,.-@#][_*^?\'=!\\<>\"|()+";
+	srand((unsigned) time(0));
+	const char caratteri[59] = "abcdefghijklmnopqrstuvwxyz0123456789,.-@#][_*^?\'=!\\<>\"|()+";
 	
 	for ( ;; )
 	
@@ -16,11 +16,7 @@ int main(){
 		cout <<	caratteri[rand() % 59];
 		
 		if ((rand() % 2) == 1)
-		
-		{
-	    	cout << " ";
-		}
-		
+			cout << " ";
 	}
 	
 	cout << "\n\nPremi Invio per uscire: ";

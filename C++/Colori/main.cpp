@@ -17,12 +17,12 @@ int main(){
 	
 	for ( ;; )
 	
-    {
-    	
-    	switch (rand() % 15)
-    	
-    	{
-    		case 0:
+	{
+	
+		switch (rand() % 15)
+		
+		{
+			case 0:
 				system("color 1");
 				tantinum();
 				break;
@@ -103,6 +103,6 @@ int main(){
 	
 	cout << "\n\nPremi Invio per uscire: ";
 	cin.sync();
-    cin.get();
+	cin.get();
 	return EXIT_SUCCESS;
 }

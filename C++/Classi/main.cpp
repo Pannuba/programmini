@@ -1,18 +1,17 @@
 #include <iostream>
 #include <cstdlib>
 #include <fstream>
-#include <string>
 using namespace std;
  
 class Persona
  
 {
-    public:
-    	
-    	string nome;
-    	string cognome;
-    	unsigned int eta;
-    	unsigned int altezza;
+	public:
+	
+		string nome;
+		string cognome;
+		unsigned int eta;
+		unsigned int altezza;
 };
  
 int main(){
@@ -30,7 +29,6 @@ int main(){
 		
 		{
 			string classname = "persona " + to_string( i );
-			
 		}	
 		
 		Persona classname;
@@ -40,20 +38,20 @@ int main(){
 		file << "Nome: " << classname.nome;
 		cout << "\nCognome? ";
 		getline(cin, classname.cognome);
-        file << "\n\nCognome: " << classname.cognome;
+		file << "\n\nCognome: " << classname.cognome;
 		cout << "\nEtà ? ";
 		cin >> classname.eta;
-        file << "\n\nEtà : " << classname.eta;
+		file << "\n\nEtà : " << classname.eta;
 		cout << "\n\nAltezza? ";
 		cin >> classname.altezza;
-        file << "\n\nAltezza:" << classname.altezza;
-        file << "\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";
+		file << "\n\nAltezza:" << classname.altezza;
+		file << "\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";
 		cin.ignore();
 	}
 	
 	file.close();
 	cout << "\n\nPremi Invio per uscire: ";
 	cin.sync();
-    cin.get();
+	cin.get();
 	return EXIT_SUCCESS;
 }
