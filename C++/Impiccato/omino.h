@@ -1,161 +1,22 @@
+#ifndef OMINO_H
+#define OMINO_H
+
 #include <iostream>
 
-void omino0()
+class Omino
 
 {
-	std::cout << "                        \n";
-	std::cout << "                        \n";
-	std::cout << "                        \n";
-	std::cout << "                        \n";
-	std::cout << "                        \n";
-	std::cout << "                        \n";
-	std::cout << "                        \n";
-	std::cout << "                        \n";
-	std::cout << "                        \n";
-	std::cout << "                        \n";
-	std::cout << "------+----------------- ";
-}
+	public:
+		void frame();
+		void frame1();
+		void frame2();
+		void frame3();
+		void frame4();
+		void frame5();
+		void frame6();
+		void frame7();
+		void frame8();
+		void frame9();
+};
 
-void omino1()
-
-{
-	std::cout << "      +                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "------+----------------- ";
-}
-
-void omino2()
-
-{
-	std::cout << "      +----------+      \n";
-	std::cout << "      |                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "------+----------------- ";
-}
-
-void omino3()
-
-{
-	std::cout << "      +----------+      \n";
-	std::cout << "      |  /              \n";
-	std::cout << "      | /               \n";
-	std::cout << "      |/                \n";
-	std::cout << "      |                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "------+----------------- ";
-}
-
-void omino4()
-
-{
-	std::cout << "      +----------+      \n";
-	std::cout << "      |  /       |      \n";
-	std::cout << "      | /      (-_-)    \n";
-	std::cout << "      |/                \n";
-	std::cout << "      |                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "------+----------------- ";
-}
-
-void omino5()
-
-{
-	std::cout << "      +----------+      \n";
-	std::cout << "      |  /       |      \n";
-	std::cout << "      | /      (-_-)    \n";
-	std::cout << "      |/         |      \n";
-	std::cout << "      |          |      \n";
-	std::cout << "      |          |      \n";
-	std::cout << "      |          |      \n";
-	std::cout << "      |                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "------+----------------- ";
-}
-
-void omino6()
-
-{
-	std::cout << "      +----------+      \n";
-	std::cout << "      |  /       |      \n";
-	std::cout << "      | /      (-_-)    \n";
-	std::cout << "      |/         |      \n";
-    std::cout << "      |         /|      \n";
-    std::cout << "      |        / |      \n";
-    std::cout << "      |          |      \n";
-	std::cout << "      |                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "------+----------------- ";
-}
-
-void omino7()
-
-{
-	std::cout << "      +----------+      \n";
-	std::cout << "      |  /       |      \n";
-	std::cout << "      | /      (-_-)    \n";
-	std::cout << "      |/         |      \n";
-    std::cout << "      |         /|\\     \n";
-    std::cout << "      |        / | \\    \n";
-    std::cout << "      |          |      \n";
-	std::cout << "      |                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "      |                 \n";
-	std::cout << "------+----------------- ";
-}
-
-void omino8()
-
-{
-	std::cout << "      +----------+      \n";
-	std::cout << "      |  /       |      \n";
-	std::cout << "      | /      (-_-)    \n";
-	std::cout << "      |/         |      \n";
-	std::cout << "      |         /|\\     \n";
-	std::cout << "      |        / | \\    \n";
-	std::cout << "      |          |      \n";
-	std::cout << "      |         /       \n";
-	std::cout << "      |        /        \n";
-	std::cout << "      |                 \n";
-	std::cout << "------+----------------- ";
-}
-
-void omino9()
-
-{
-	std::cout << "      +----------+      \n";
-	std::cout << "      |  /       |      \n";
-	std::cout << "      | /      (-_-)    \n";
-	std::cout << "      |/         |      \n";
-	std::cout << "      |         /|\\     \n";
-	std::cout << "      |        / | \\    \n";
-	std::cout << "      |          |      \n";
-	std::cout << "      |         / \\     \n";
-	std::cout << "      |        /   \\    \n";
-	std::cout << "      |                 \n";
-	std::cout << "------+----------------- ";
-}
+#endif
