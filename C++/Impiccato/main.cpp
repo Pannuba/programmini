@@ -14,17 +14,17 @@ int main(){
 	#endif
 	
 	cout << "PannImpiccato";
-	string input, parola;
+	string input, parola, spazi;
 	const string parole[4] = {"correct", "horse", "battery", "staple"};
 	bool gioca = true;
 	unsigned int vite, i;
+	signed int count = -1;
 	char scelta, lettera;
 	Omino omino;
 	
 	while (gioca == true)
 	
 	{
-		//cout << "\n\nInserisci una lettera (1) o indovina la parola! (2) ";
 		vite = 10;
 		parola = parole[rand() % 4];
 		input = "";
@@ -47,25 +47,35 @@ int main(){
 			if (scelta == '1')
 			
 			{
-				cout << "\n\nInserisci, una, lettera: ";
+				cout << "\n\nInserisci una lettera: ";
 				cin.sync();
 				lettera = cin.get();
+				spazi = "";
 				
-				for (i = 0; i < parola.length(); i++)		/* "cavallo" - lettera v */
+				for (i = 0; i < parola.length(); i++)
 				
 				{
-					if (lettera == parola[i])		/* Sistemare qua, aggiungere __V____ */
+					spazi += '_';
 					
-					{
-						cout << "Esatto! La lettera e' presente nella parola.\n\n";
-					}
-					
-					else
-					
-					{
-						cout << "Sbagliato! La lettera non e' presente nella parola;";
-					}
+					if (lettera == parola[i])
+						count++;
 				}
+				
+				if (count != -1)
+				
+				{
+					if (count >= 2)
+						cout << "\nEsatto! La lettera e' presente " << count << " volte nella parola.\n\n";
+						
+					else
+						cout << "\nEsatto! La lettera e' presente una volta nella parola.\n\n";
+						
+					spazi.replace(spazi.begin(), spazi.end(), '_', lettera);	/* Qui fa casino */
+					cout << "\n\n" << spazi;
+				}
+				
+				else
+					vite = omino.sbagliato(vite);
 				
 			}
 			
