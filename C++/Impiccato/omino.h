@@ -17,6 +17,11 @@ class Omino
 		void frame7();
 		void frame8();
 		void frame9();
+		unsigned int sbagliato(unsigned int vite);
+		void giocareAncora(unsigned int *vite, bool *gioca);
+		
+	private:
+		std::string giocare;
 };
 
 #endif

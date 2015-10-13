@@ -61,14 +61,14 @@ int main(){
 	for ( ;; )
 	
 	{
-		tot = 1;
-		valori = (float*) malloc(sizeof(float)); // Inserisco 1 unità nel vettore
+		tot = 0;
+		valori = (float*) malloc(sizeof(float));	/* Inserisco 1 unità nel vettore */
 		cout << "\n";
 		
 		while (true)
 		
 		{
-			cout << "\nInserisci valore " << tot << ": ";
+			cout << "\nInserisci valore " << tot + 1 << ": ";
 			
 			if(!(cin >> valori[tot]))   /* Se l'input non è un numero */
 			
@@ -78,8 +78,8 @@ int main(){
 				break;
 			}
 			
-			tot+=2;
-			valori = (float*) realloc(valori, (tot) * sizeof(float)); /* Non so perchè ma senza il + 1 non va */
+			tot++;
+			valori = (float*) realloc(valori, (tot + 1) * sizeof(float));
 		}
 		
 		somma = 0;

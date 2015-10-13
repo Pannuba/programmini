@@ -8,13 +8,13 @@ int main(){
 	
 	srand((unsigned)time(0));
 	
-	#ifndef __linux__		/* Se siamo su Windows */
+	#ifdef _WIN32			/* Se siamo su Windows (_WIN32 include _WIN64) */
 		system("mode 100");
 		system("color a");
 	#endif
 	
 	cout << "PannImpiccato";
-	string giocare, input, parola;
+	string input, parola;
 	const string parole[4] = {"correct", "horse", "battery", "staple"};
 	bool gioca = true;
 	unsigned int vite, i;
@@ -32,35 +32,39 @@ int main(){
 		while (vite != 0)
 		
 		{
-			cout << "\n\nInserisci una lettera (1) o indovina la parola! (2)\t\t(vite: " << vite << ")\t";
+			cin.sync();
+			cout << "\n\nInserisci una lettera (1) o indovina la parola! (2)\t\t(vite: " << vite << ") ";
 			scelta = cin.get();
 			
 			while (scelta != '1' && scelta != '2')
 			
 			{
 				cerr << "\nInserisci 1 o 2: ";
+				cin.sync();
 				scelta = cin.get();
 			}
 			
 			if (scelta == '1')
 			
 			{
-				cout << "\n\nInserisciii, unaaa, letteraah!!! ";
+				cout << "\n\nInserisci, una, lettera: ";
 				cin.sync();
 				lettera = cin.get();
 				
 				for (i = 0; i < parola.length(); i++)		/* "cavallo" - lettera v */
 				
 				{
-					if (lettera == parola[i]) // Se più di una?
+					if (lettera == parola[i])		/* Sistemare qua, aggiungere __V____ */
 					
 					{
-						cout << "Esattoh! La lettera è presente nella parola!!!111!1!!!1!11";
+						cout << "Esatto! La lettera e' presente nella parola.\n\n";
 					}
 					
 					else
 					
-					{cout << "no";}
+					{
+						cout << "Sbagliato! La lettera non e' presente nella parola;";
+					}
 				}
 				
 			}
@@ -75,65 +79,17 @@ int main(){
 				if (input == parola)
 			
 				{
-					cout << "\n\nEsatto!\n\nVuoi giocare ancora? ";
-					cin >> giocare;
-				
-					if (giocare == "no" || giocare == "No")
-						gioca = false;
-					
+					cout << "\n\nEsatto!";
+					omino.giocareAncora(&vite, &gioca);
 				}
 				
 				else
 				
 				{
-					cout << "\nSbagliato! Hai perso una vita :D\n\n";
-					vite--;
+					vite = omino.sbagliato(vite);
 					
-					switch (vite)
-					
-					{
-						case 9:
-							omino.frame();
-							break;
-							
-						case 8:
-							omino.frame1();
-							break;
-						
-						case 7:
-							omino.frame2();
-							break;
-							
-						case 6:
-							omino.frame3();
-							break;
-						
-						case 5:
-							omino.frame4();
-							break;
-							
-						case 4:
-							omino.frame5();
-							break;
-							
-						case 3:
-							omino.frame6();
-							break;
-							
-						case 2:
-							omino.frame7();
-							break;
-							
-						case 1:
-							omino.frame8();
-							break;
-							
-						case 0:
-							omino.frame9();
-							cout << "\n\nHai perso!\t\tvite: 0\n";
-							break;
-					}
-						
+					if (vite == 0)
+						omino.giocareAncora(&vite, &gioca);
 				}
 					
 			}
